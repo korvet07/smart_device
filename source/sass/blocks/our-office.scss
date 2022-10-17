@@ -1,0 +1,19 @@
+.our-office {
+  @include list-default;
+  font-family: "Pt Mono",
+    "Monaco",
+    monospace;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 135%;
+  color: rgba(255, 255, 255, 0.7);
+}
+//  переопределение стилей библиотеки accordion-js
+.our-office .our-office__item:has(.our-office__tel) {
+  padding: 0;
+}
+
+.our-office__addres {
+  padding-left: 10px;
+}

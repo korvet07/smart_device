@@ -1,64 +1,202 @@
 <!DOCTYPE html>
 <html lang="ru">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="description" content="Описание проекта">
-    <title>ProjectName</title>
-    <link rel="stylesheet" href="css/style.min.css">
-  </head>
-  <body>
-    <div class="wrapper">
-      <header>
-        <div class="container"></div>
-      </header>
-      <main>
-        <section class="intro">
-          <div class="container">
-            <h1>Тестовая страница.</h1>
-            <p>На данной странице показан пример модальных окон.</p>
-            <p>Перед началом разработки не забудьте удалить всё содержимое &#8249;main&#8250;&#8249;&#8260;main&#8250;.</p>
-            <p><a class="btn" href="#" data-open-modal="feedback">modal--feedback link</a></p>
-            <p><a class="btn" href="#" data-open-modal="success">modal--success link</a></p>
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Smart Device">
+  <link rel="manifest" href="manifest.webmanifest">
+  <link rel="icon" href="favicon.ico"> <!-- 32×32 -->
+  <link rel="apple-touch-icon" href="favicon/apple-icon-180x180.png"> <!-- 180×180 -->
+  <link rel="preload" href="fonts/PTMono-Regular.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+  <link rel="preload" href="fonts/roboto-condensed-bold.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+  <link rel="preload" href="fonts/roboto-condensed-reg.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+  <title>Smart Device</title>
+  <link rel="stylesheet" href="css/style.min.css">
+</head>
+
+<body>
+  <header class="page-header">
+    <nav class="page-header__nav page-nav">
+      <div class="container page-nav__container">
+        <ul class="page-nav__list">
+          <li class="page-nav__item">
+            <a class="logo-header">
+              <picture>
+                <source media="(max-width: 770px)" srcset="img/svg/logo-mobile.svg">
+                <img src="img/svg/logo-desktop.svg" alt="Логотип компании.">
+              </picture>
+            </a>
+          </li>
+          <li class="page-nav__item">
+            <a href="mailto:info@sd.ru" class="page-nav__link">
+              <svg width="21" height="20" viewBox="0 0 21 20" fill="none" xmlns="http://www.w3.org/2000/svg" role="img"
+                aria-label="Емайл.">
+                <use xlink:href="img/sprite_auto.svg#email"></use>
+              </svg>
+              <span>info@sd.ru</span>
+            </a>
+          </li>
+          <li class="page-nav__item">
+            <a href="tel:+74950005252" class="page-nav__link">
+              <svg width="21" height="20" viewBox="0 0 21 20" fill="none" xmlns="http://www.w3.org/2000/svg" role="img"
+                aria-label="Телефон.">
+                <use xlink:href="img/sprite_auto.svg#phone-call"></use>
+              </svg>
+              <span>+7 (495) 000 52 52</span>
+            </a>
+          </li>
+          <li class="page-nav__item">
+            <a class="btn page-nav__button" href="#" data-open-modal="feedback" aria-haspopup="true">Заказать звонок</a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+
+  </header>
+  <main class="page-main">
+    <div class="container">
+      <form action="">
+        <div class="row">
+          <label for="phone">Телефон:</label>
+        </div>
+        <div class="row">
+          <input type="tel" name="phone" id="phone" placeholder="+7(000)000-00-00" />
+        </div>
+      </form>
+    </div>
+  </main>
+  <footer class="page-footer">
+    <div class="container page-footer__wrapper">
+      <section class="footer-social page-footer__social">
+        <div class="footer-social__wrapper">
+          <a class="page-footer__logo">
+            <img src="img/svg/logo-desktop.svg" alt="Логотип компании." width="215" height="55">
+          </a>
+          <ul class="footer-social__list">
+            <li class="footer-social__item">
+              <a href="#" class="footer-social__link" aria-label="Одноклассники.">
+                <svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg"
+                  role="img">
+                  <use xlink:href="img/sprite_auto.svg#odnoklassniki"></use>
+                </svg>
+              </a>
+            </li>
+            <li class="footer-social__item">
+              <a href="#" class="footer-social__link" aria-label="В Контакте">
+                <svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg"
+                  role="img">
+                  <use xlink:href="img/sprite_auto.svg#vk"></use>
+                </svg>
+              </a>
+            </li>
+            <li class="footer-social__item">
+              <a href="#" class="footer-social__link" aria-label="Пинтерест">
+                <svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg"
+                  role="img">
+                  <use xlink:href="img/sprite_auto.svg#pinterest"></use>
+                </svg>
+              </a>
+            </li>
+          </ul>
+        </div>
+      </section>
+      <section class="page-footer-accotdion">
+        <div class="accordion-container page-footer-accordion__wrapper">
+          <div class="ac page-footer-accordion__one">
+            <h2 class="ac-header page-footer__title">
+              <button type="button" class="ac-trigger page-footer__btn">Разделы сайта</button>
+            </h2>
+            <div class="ac-panel">
+              <ul class="page-footer__list">
+                <li class="page-footer__item ac-text">
+                  <a class="page-footer__link" href="#" aria-label="О Компаниии">О Компаниии</a>
+                </li>
+                <li class="page-footer__item ac-text">
+                  <a class="page-footer__link" href="#" aria-label="Продукты">Продукты</a>
+                </li>
+                <li class="page-footer__item ac-text">
+                  <a class="page-footer__link" href="#" aria-label="Производство печатных плат">Производство
+                    печатных<br>&ensp;плат</a>
+                </li>
+                <li class="page-footer__item ac-text">
+                  <a class="page-footer__link" href="#" aria-label="Монтаж печатных плат">Монтаж печатных плат</a>
+                </li>
+              </ul>
+              <ul class="page-footer__list ">
+                <li class="page-footer__item ac-text">
+                  <a class="page-footer__link" href="#" aria-label="Комплектующие">Комплектующие</a>
+                </li>
+                <li class="page-footer__item ac-text">
+                  <a class="page-footer__link" href="#" aria-label="Доставка">Доставка</a>
+                </li>
+                <li class="page-footer__item ac-text">
+                  <a class="page-footer__link" href="#" aria-label="Контакты">Контакты</a>
+                </li>
+              </ul>
+            </div>
           </div>
-        </section>
-      </main>
-      <footer>
-        <div class="container"></div>
-      </footer>
-    </div>
-
-    <!-- Модалки -->
-    <div class="modal modal--preload" data-modal="feedback">
-      <div class="modal__wrapper">
-        <div class="modal__overlay" data-close-modal></div>
-        <div class="modal__content">
-          <p class="modal__description">Обычная модалка</p>
-          <button class="modal__close-btn btn-reset" type="button" aria-label="Закрыть попап" data-close-modal>
-            <svg width="15" height="15">
-              <use xlink:href="img/sprite_auto.svg#icon-close"></use>
-            </svg>
-          </button>
+          <div class="ac page-footer-accordion__two">
+            <h2 class="ac-header page-footer__title">
+              <button type="button" class="ac-trigger page-footer__btn">Наш офис</button>
+            </h2>
+            <div class="ac-panel">
+              <ul class="our-office">
+                <li class="our-office__item ">
+                  <div class="our-office__addres">
+                    г. Мытищи, Олимпийский проспект, <br> д.10
+                  </div>
+                </li>
+                <li class="our-office__item ac-text">
+                  <a href="tel:+74955894050" class="our-office__tel">+7 (495) 589-40-50</a>
+                </li>
+                <li class="our-office__item ac-text ">
+                  <a href="tel:+79253895829" class="our-office__tel">+7 (925) 389-58-29</a>
+                </li>
+                <li class="our-office__item ac-text">
+                  <a href="tel:+79253647813" class="our-office__tel">+7 (925) 364-78-13</a>
+                </li>
+              </ul>
+            </div>
+          </div>
         </div>
+      </section>
+    </div>
+  </footer>
+  <div class="modal modal--preload modal--no-scale" data-modal="feedback">
+    <div class="modal__wrapper">
+      <div class="modal__overlay" data-close-modal></div>
+      <div class="modal__content">
+        <div class="modal__description">
+          <h2>Закажите звонок</h2>
+          <p>Оставьте контакты, мы проконсультируем вас бесплатно в удобное время</p>
+          <form action="https://echo.htmlacademy.ru/" class="modal__form" id="modal-form" method="post"
+            enctype="multipart/form-data" target="_blank">
+            <label><input type="text" name="user-name" id="user-name" placeholder="Имя" required>
+            </label>
+            <label><input type="tel" name="user-tel" id="user-tel" placeholder="Телефон" required>
+            </label>
+            <textarea name="user-question" id="user-question" placeholder="Ваш вопрос"></textarea>
+            <button class="btn modal__submit-btn btn--black" type="submit">отправить</button>
+          </form>
+          <div class="modal__checkbox-input-wrapper">
+            <input class="visually-hidden" type="checkbox" form="modal-form" name="user-consent" id="user-consent"
+              required>
+            <span></span>
+            <label for="user-consent">Я согласен на обработку персональных данных</label>
+          </div>
+        </div>
+        <button class="modal__close-btn btn-reset" type="button" aria-label="Закрыть попап" data-close-modal>
+          <svg width="15" height="15">
+            <use xlink:href="img/sprite_auto.svg#icon-close"></use>
+          </svg>
+        </button>
       </div>
     </div>
+  </div>
+  <script src="js/vendor.min.js"></script>
+  <script src="js/main.min.js"></script>
+</body>
 
-    <div class="modal modal--preload modal--fit-content modal--no-scale" data-modal="success">
-      <div class="modal__wrapper">
-        <div class="modal__overlay" data-close-modal></div>
-        <div class="modal__content">
-          <p class="modal__description">Размер этой модалки зависит от ширины контента,<br> отключена анимация-скейл</p>
-          <button class="modal__close-btn btn-reset" type="button" aria-label="Закрыть попап" data-close-modal>
-            <svg width="15" height="15">
-              <use xlink:href="img/sprite_auto.svg#icon-close"></use>
-            </svg>
-          </button>
-        </div>
-      </div>
-    </div>
-
-    <script src="js/vendor.min.js"></script>
-    <script src="js/main.min.js"></script>
-  </body>
 </html>

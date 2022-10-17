@@ -205,3 +205,4 @@ export class Modals {
     this._enableScrolling = true;
   }
 }
+

@@ -1,0 +1,56 @@
+.page-footer-accotdion {
+  flex-grow: 1;
+}
+
+.page-footer-accordion__wrapper {
+  flex-grow: 1;
+  display: flex;
+
+  @include vp-767 {
+    flex-direction: column;
+  }
+}
+
+.page-footer-accordion__one {
+  flex-grow: 1;
+}
+
+.page-footer-accordion__one,
+.page-footer-accordion__two {
+  background: transparent;
+  border: none;
+
+  @include vp-767 {
+    padding-bottom: 20px;
+    margin: 0;
+  }
+}
+
+.page-footer-accordion__one a,
+.page-footer-accordion__two a {
+  padding: 10px;
+  font-family: $ff-mono;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 135%;
+  color: rgba(255, 255, 255, 0.7);
+
+  @media (hover: hover) {
+    &:hover {
+      color: #00b2ff;
+    }
+  }
+
+  &:focus {
+    color: #00b2ff;
+  }
+
+  &:active {
+    opacity: 0.5;
+  }
+}
+//  переопределение стилей библиотеки accordion-js
+.page-footer__list .page-footer__item:has(.page-footer__link) {
+  padding: 0;
+}

@@ -4,7 +4,9 @@
 @import "vendor/normalize";
 // Swiper 7.4.1
 // @import "vendor/swiper";
+// @import "vendor/accordion";
 
+@import "vendor/accordion.scss";
 // Global
 // ---------------------------------
 
@@ -17,10 +19,14 @@
 
 // Blocks
 // ---------------------------------
-
 @import "blocks/btn";
 @import "blocks/modal";
-
+@import "blocks/page-header";
+@import "blocks/page-nav";
+@import "blocks/page-footer.scss";
+@import "blocks/footer-social.scss";
+@import "blocks/page-footer-accotdion.scss";
+@import "blocks/our-office.scss";
 // ---------------------------------
 
 // ❗❗❗ запрещено использовать изображения в css, касается как jpg \ png, так и svg

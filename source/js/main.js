@@ -1,15 +1,13 @@
 import {iosVhFix} from './utils/ios-vh-fix';
 import {initModals} from './modules/modals/init-modals';
+import './modules/modals/mask.js';
 
 // ---------------------------------
 
 window.addEventListener('DOMContentLoaded', () => {
-
   // Utils
   // ---------------------------------
-
   iosVhFix();
-
   // Modules
   // ---------------------------------
 
