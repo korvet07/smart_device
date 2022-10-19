@@ -1,0 +1,79 @@
+.main-screen {
+  color: $color-page-white;
+  flex-grow: 1;
+  min-height: 880px;
+  margin-bottom: 120px;
+  background: linear-gradient(180deg, rgba(25, 32, 36, 0.7) 71.72%, rgba(25, 32, 36, 0) 100%),
+    url("../../img/about-bg-desk.jpg") center/cover no-repeat;
+  background-size: 100vw 880px;
+  background-position-y: -5%;
+
+  @include retina {
+    background: linear-gradient(180deg, rgba(25, 32, 36, 0.7) 71.72%, rgba(25, 32, 36, 0) 100%),
+      url("../../img/about-bg-desk@2x.jpg") center/cover no-repeat;
+  }
+
+  @include vp-1023 {
+    background: linear-gradient(180deg, rgba(25, 32, 36, 0.7) 71.72%, rgba(25, 32, 36, 0) 100%),
+      url("../../img/about-bg-tab.jpg") center/cover no-repeat;
+
+    @include retina {
+      background: linear-gradient(180deg, rgba(25, 32, 36, 0.7) 71.72%, rgba(25, 32, 36, 0) 100%),
+        url("../../img/about-bg-tab@2x.jpg") center/cover no-repeat;
+    }
+  }
+
+
+  @include vp-767 {
+    background: linear-gradient(180deg, rgba(25, 32, 36, 0.7) 71.72%, rgba(25, 32, 36, 0) 100%),
+      url("../../img/about-bg-mob.jpg") center/cover no-repeat;
+
+    @include retina {
+      background: linear-gradient(180deg, rgba(25, 32, 36, 0.7) 71.72%, rgba(25, 32, 36, 0) 100%),
+        url("../../img/about-bg-mob@2x.jpg") center/cover no-repeat;
+    }
+  }
+}
+
+.main-screen__wrapper {
+  padding-left: 6.5vw;
+
+  @include vp-1023 {
+    padding: 0 50px;
+  }
+}
+
+.main-screen h1 {
+  font-family: $ff-roboto;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 80px;
+  line-height: 94px;
+  letter-spacing: 0.07em;
+  text-transform: uppercase;
+  margin-bottom: 40px;
+
+  @include vp-1023 {
+    font-size: 64px;
+    line-height: 75px;
+  }
+
+  @include vp-767 {
+    font-size: 36px;
+    line-height: 42px;
+  }
+}
+
+.main-screen p {
+  font-size: 22px;
+  line-height: 155%;
+  margin-bottom: 40px;
+}
+
+.main-screen a {
+  font-size: 18px;
+  line-height: 21px;
+  letter-spacing: 0.05em;
+  min-width: 410px;
+  padding: 20px;
+}

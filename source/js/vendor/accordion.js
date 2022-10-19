@@ -1,7 +1,8 @@
 import Accordion from 'accordion-js';
-function showAccordion(){
-  if (window.innerWidth <= 767) {
-     new Accordion('.accordion-container', {
+const accordion = document.querySelector('.accordion-container');
+function showAccordion() {
+  if (window.innerWidth <= 767 && accordion) {
+    new Accordion(accordion, {
       duration: 400,
     });
   }

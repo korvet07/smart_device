@@ -1,0 +1,70 @@
+.card-list {
+  @include list-default;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-auto-rows: minmax(650px, auto);
+  grid-gap: 50px 85px;
+  margin-bottom: 140px;
+
+  @include vp-1023 {
+    grid-template-columns: 1fr;
+    grid-auto-rows: minmax(250px, auto);
+    grid-column: 0;
+  }
+}
+
+.card-list h3 {
+  position: relative;
+  font-family: $ff-roboto;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 30px;
+  color: #ffffff;
+}
+
+.card-list li {
+  display: flex;
+}
+
+.card-list a {
+  position: relative;
+  flex-grow: 1;
+  padding: 50px 40px 70px;
+  background: rgb(4, 24, 39);
+}
+
+.card-list img {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  opacity: 0.5;
+}
+
+.card-list div {
+  position: absolute;
+  width: 60px;
+  height: 60px;
+  background: #00b2ff;
+  border-radius: 3px 0 0 0;
+  bottom: 0;
+  right: 0;
+}
+
+.card-list i {
+  position: absolute;
+  display: inline-block;
+  width: 5px;
+  height: 10px;
+  bottom: 0;
+  top: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
+  border: solid $color-default-white;
+  border-width: 0 2px 2px 0;
+  padding: 4px;
+  transform: rotate(-45deg);
+}

@@ -1,6 +1,7 @@
 .btn {
   display: inline-flex;
   align-items: center;
+  justify-content: center;
   padding: 10px 15px;
   color: $color-page-white;
   font-family: $ff-roboto;
@@ -12,7 +13,7 @@
   letter-spacing: 0.05em;
   text-transform: uppercase;
   background-color: transparent;
-  border: 1px solid $color-page-white;
+  border: 2px solid $color-page-white;
   border-radius: 3px;
   cursor: pointer;
   transition: opacity $trans-default;
@@ -21,33 +22,58 @@
     background-color: $color-torch-red;
   }
 
-  &--black {
-    min-height: 45px;
-    background: #041427;
-    border-radius: 3px;
-    justify-content: center;
-    outline: none;
-    border: none;
-  }
 
   &:disabled {
     opacity: 0.5;
     pointer-events: none;
   }
 
+  &:focus {
+    background-color: transparent;
+    border: 3px solid #1e90ff;
+    color: #00b2ff;
+  }
+
+  &:active {
+    opacity: 0.5;
+  }
+
   @media (hover: hover),
     screen and (min-width: 0\0) {
     &:hover {
+      background-color: transparent;
       color: #00b2ff;
-      opacity: 0.8;
+    }
+  }
+
+  &--blue {
+    border: none;
+    background-color: #00b2ff;
+    color: $color-page-white;
+
+    &::after {
+      content: attr(data-content);
     }
 
-    &:focus,
-    &:active {
-      background-color: #778899;
-      border: 1px solid #00b2ff;
-      color: #00b2ff;
-      opacity: 0.7;
+    @include vp-767 {
+      &::after {
+        content: attr(data-mobile-content);
+      }
+    }
+  }
+
+  &--black {
+    border: none;
+    min-height: 45px;
+    background: #041427;
+    justify-content: center;
+
+    @media (hover: hover),
+      screen and (min-width: 0\0) {
+      &:hover {
+        color: $color-default-black;
+        outline: 3px solid $color-default-black;
+      }
     }
   }
 }
