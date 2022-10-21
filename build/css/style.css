@@ -1032,6 +1032,9 @@ button,
 .checkbox-input-wrapper {
   position: relative;
   padding-left: 20px;
+  -ms-flex-item-align: end;
+  -ms-grid-row-align: end;
+  align-self: end;
 }
 
 .checkbox-input-wrapper span {
@@ -1085,9 +1088,6 @@ input[type="checkbox"]:checked + span::after {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: justify;
-  -ms-flex-pack: justify;
-  justify-content: space-between;
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
@@ -1113,9 +1113,18 @@ input[type="checkbox"]:checked + span::after {
   margin-right: 5%;
 }
 
+.page-nav__item:first-child {
+  margin-right: 160px;
+}
+
 .page-nav__link svg {
   fill: #00b2ff;
   margin-right: 15px;
+}
+
+.page-nav__item:nth-child(3) {
+  margin-left: 30px;
+  margin-right: 145px;
 }
 
 .page-nav__link:hover svg {
@@ -1177,6 +1186,7 @@ input[type="checkbox"]:checked + span::after {
   text-transform: uppercase;
   margin-bottom: 20px;
   pointer-events: none;
+  margin: 0;
 }
 
 .page-footer-accordion__wrapper .page-footer__btn::after {
@@ -1194,7 +1204,7 @@ input[type="checkbox"]:checked + span::after {
 }
 
 .page-footer__social {
-  margin-right: 8.4vw;
+  margin-right: 7.6vw;
 }
 
 .page-footer__logo {
@@ -1286,6 +1296,7 @@ input[type="checkbox"]:checked + span::after {
 .page-footer-accordion__two {
   background: transparent;
   border: none;
+  margin: 0;
 }
 
 .page-footer-accordion__one a,
@@ -1338,7 +1349,7 @@ input[type="checkbox"]:checked + span::after {
   -webkit-box-flex: 1;
   -ms-flex-positive: 1;
   flex-grow: 1;
-  min-height: 880px;
+  min-height: 755px;
   margin-bottom: 120px;
   background: -webkit-gradient(linear, left top, left bottom, color-stop(71.72%, rgba(25, 32, 36, 0.7)), to(rgba(25, 32, 36, 0))), url("../../img/about-bg-desk.jpg") center/cover no-repeat;
   background: -o-linear-gradient(top, rgba(25, 32, 36, 0.7) 71.72%, rgba(25, 32, 36, 0) 100%), url("../../img/about-bg-desk.jpg") center/cover no-repeat;
@@ -1360,6 +1371,7 @@ input[type="checkbox"]:checked + span::after {
   letter-spacing: 0.07em;
   text-transform: uppercase;
   margin-bottom: 40px;
+  margin-top: 182px;
 }
 
 .main-screen p {
@@ -1482,6 +1494,7 @@ input[type="checkbox"]:checked + span::after {
   font-weight: 400;
   font-size: 36px;
   line-height: 51px;
+  margin: 0;
 }
 
 .about__content p {
@@ -1653,6 +1666,7 @@ a[aria-label="Карточка- монтаж печатных плат."] h3 :fi
   position: relative;
   background: -o-linear-gradient(311deg, #026592 33%, #00b2ff 33%);
   background: linear-gradient(139deg, #026592 33%, #00b2ff 33%);
+  min-height: 838px;
 }
 
 .feedback__wrapper {
@@ -1681,7 +1695,7 @@ a[aria-label="Карточка- монтаж печатных плат."] h3 :fi
   font-weight: 400;
   font-size: 36px;
   line-height: 51px;
-  margin-bottom: 15px;
+  margin: 0;
 }
 
 .feedback-form p {
@@ -1909,10 +1923,6 @@ a[aria-label="Карточка- монтаж печатных плат."] h3 :fi
   .page-nav__link span {
     min-width: 0;
     font-size: 0;
-  }
-
-  .page-nav__item:first-child {
-    margin-right: auto;
   }
 
   .page-nav__link svg {

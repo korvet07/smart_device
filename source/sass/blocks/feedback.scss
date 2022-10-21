@@ -2,15 +2,8 @@
   padding-top: 170px;
   position: relative;
   background: linear-gradient(139deg, #026592 33%, $color-page-blue 33%);
+  min-height: 838px;
 
-  // &::after {
-  //   content: "";
-  //   position: absolute;
-  //   height: 100%;
-  //   top: 0;
-  //   width: 975px;
-  //   background: linear-gradient(to left top, transparent 50%, rgba(4, 24, 39, 0.5) 50%);
-  // }
   @include vp-1023 {
     background: $color-page-blue;
   }

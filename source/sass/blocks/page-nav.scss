@@ -12,7 +12,6 @@
   @include list-default;
   flex-grow: 1;
   display: flex;
-  justify-content: space-between;
   align-items: center;
   min-height: 120px;
 }
@@ -38,9 +37,18 @@
   }
 }
 
+.page-nav__item:first-child {
+  margin-right: 160px;
+}
+
 .page-nav__link svg {
   fill: $color-page-blue;
   margin-right: 15px;
+}
+
+.page-nav__item:nth-child(3) {
+  margin-left: 30px;
+  margin-right: 145px;
 }
 
 .page-nav__link:hover svg {
@@ -77,10 +85,6 @@
   .page-nav__link span {
     min-width: 0;
     font-size: 0;
-  }
-
-  .page-nav__item:first-child {
-    margin-right: auto;
   }
 
   .page-nav__link svg {

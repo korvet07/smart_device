@@ -45,8 +45,8 @@
   line-height: 16px;
   letter-spacing: 0.05em;
   text-transform: uppercase;
-  margin-bottom: 20px;
   pointer-events: none;
+
 
   &::after {
     content: "";
@@ -71,7 +71,7 @@
 }
 
 .page-footer__social {
-  margin-right: 8.4vw;
+  margin-right: 7.6vw;
 
   @include vp-1023 {
     flex-basis: 100%;

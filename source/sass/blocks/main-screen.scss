@@ -1,7 +1,7 @@
 .main-screen {
   color: $color-page-white;
   flex-grow: 1;
-  min-height: 880px;
+  min-height: 755px;
   margin-bottom: 120px;
   background: linear-gradient(180deg, rgba(25, 32, 36, 0.7) 71.72%, rgba(25, 32, 36, 0) 100%),
     url("../../img/about-bg-desk.jpg") center/cover no-repeat;
@@ -52,6 +52,7 @@
   letter-spacing: 0.07em;
   text-transform: uppercase;
   margin-bottom: 40px;
+  margin-top: 182px;
 
   @include vp-1023 {
     font-size: 64px;
