@@ -75,5 +75,14 @@
   line-height: 21px;
   letter-spacing: 0.05em;
   min-width: 410px;
-  padding: 20px;
+  min-height: 55px;
+  padding: 15px;
+
+  @include vp-767 {
+    font-size: 14px;
+    line-height: 16px;
+    min-width: 270px;
+    min-height: 40px;
+    padding: 10px;
+  }
 }

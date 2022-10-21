@@ -22,17 +22,17 @@
 .footer-social__link:hover {
   @media (hover: hover) {
     & svg {
-      fill: #00b2ff;
+      fill: $color-page-blue;
     }
   }
 }
 
 .footer-social__link:focus,
 .footer-social__link:active {
-  outline: 1px solid #00b2ff;
+  outline: 1px solid $color-page-blue;
 
   & svg {
-    fill: #00b2ff;
+    fill: $color-page-blue;
   }
 }
 

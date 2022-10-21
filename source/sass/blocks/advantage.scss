@@ -37,19 +37,19 @@
     left: 0;
     width: 5px;
     height: 100%;
-    background-color: #00b2ff;
+    background-color: $color-page-blue;
   }
 }
 
 .advantage__item svg {
-  fill: #00b2ff;
+  fill: $color-page-blue;
 }
 
 @media (hover: hover) {
   .advantage__item {
     &:hover {
       cursor: pointer;
-      background-color: #00b2ff;
+      background-color: $color-page-blue;
     }
 
     &:hover svg {
@@ -64,7 +64,7 @@
 }
 
 .advantage__item h2 {
-  color: #00b2ff;
+  color: $color-page-blue;
   font-family: $ff-roboto;
   font-style: normal;
   font-weight: 400;

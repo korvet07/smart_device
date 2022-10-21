@@ -39,7 +39,7 @@
 }
 
 .page-nav__link svg {
-  fill: #00b2ff;
+  fill: $color-page-blue;
   margin-right: 15px;
 }
 
@@ -48,7 +48,7 @@
 }
 
 .page-nav__link:hover span {
-  color: #00b2ff;
+  color: $color-page-blue;
 }
 
 .page-nav__link:focus span,
@@ -59,7 +59,7 @@
 .page-nav__link:focus,
 .page-nav__link:active {
   background-color: #778899;
-  outline: 2px solid #00b2ff;
+  outline: 2px solid $color-page-blue;
   border-radius: 4px;
 }
 

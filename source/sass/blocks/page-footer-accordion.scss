@@ -38,12 +38,12 @@
 
   @media (hover: hover) {
     &:hover {
-      color: #00b2ff;
+      color: $color-page-blue;
     }
   }
 
   &:focus {
-    color: #00b2ff;
+    color: $color-page-blue;
   }
 
   &:active {

@@ -31,7 +31,7 @@
   &:focus {
     background-color: transparent;
     border: 3px solid #1e90ff;
-    color: #00b2ff;
+    color: $color-page-blue;
   }
 
   &:active {
@@ -42,13 +42,13 @@
     screen and (min-width: 0\0) {
     &:hover {
       background-color: transparent;
-      color: #00b2ff;
+      color: $color-page-blue;
     }
   }
 
   &--blue {
     border: none;
-    background-color: #00b2ff;
+    background-color: $color-page-blue;
     color: $color-page-white;
 
     &::after {

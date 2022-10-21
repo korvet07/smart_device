@@ -159,7 +159,8 @@
   flex-basis: 100%;
 }
 
-.modal__checkbox-input-wrapper label {
+.checkbox-input-wrapper label {
+  padding-left: 10px;
   font-family: $ff-mono;
   font-style: normal;
   font-weight: 400;
@@ -197,12 +198,12 @@
   margin-bottom: 20px;
 }
 
-.modal__checkbox-input-wrapper {
+.checkbox-input-wrapper {
   position: relative;
   padding-left: 20px;
 }
 
-.modal__checkbox-input-wrapper span {
+.checkbox-input-wrapper span {
   position: absolute;
   left: 0;
   top: 3px;
