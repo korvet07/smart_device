@@ -1124,7 +1124,7 @@ input[type="checkbox"]:checked + span::after {
 
 .page-nav__item:nth-child(3) {
   margin-left: 30px;
-  margin-right: 145px;
+  margin-right: 153px;
 }
 
 .page-nav__link:hover svg {
@@ -1184,9 +1184,7 @@ input[type="checkbox"]:checked + span::after {
   line-height: 16px;
   letter-spacing: 0.05em;
   text-transform: uppercase;
-  margin-bottom: 20px;
   pointer-events: none;
-  margin: 0;
 }
 
 .page-footer-accordion__wrapper .page-footer__btn::after {
@@ -1440,6 +1438,7 @@ input[type="checkbox"]:checked + span::after {
   font-weight: 400;
   font-size: 24px;
   line-height: 34px;
+  margin-bottom: 0;
 }
 
 .advantage__item p {
@@ -1532,6 +1531,7 @@ input[type="checkbox"]:checked + span::after {
   transition: opacity 0.3s ease;
   min-width: 180px;
   min-height: 45px;
+  margin-top: 15px;
 }
 
 .about__content button::after {
@@ -1662,7 +1662,6 @@ a[aria-label="Карточка- монтаж печатных плат."] h3 :fi
 }
 
 .feedback {
-  padding-top: 170px;
   position: relative;
   background: -o-linear-gradient(311deg, #026592 33%, #00b2ff 33%);
   background: linear-gradient(139deg, #026592 33%, #00b2ff 33%);
@@ -1677,7 +1676,7 @@ a[aria-label="Карточка- монтаж печатных плат."] h3 :fi
 }
 
 .feedback__img-wrapper {
-  margin-top: 70px;
+  margin-top: 240px;
   width: 510px;
   height: 285px;
   margin-right: 115px;
@@ -1687,6 +1686,7 @@ a[aria-label="Карточка- монтаж печатных плат."] h3 :fi
   width: 585px;
   min-height: 420px;
   color: #ffffff;
+  margin-top: 170px;
 }
 
 .feedback-form h2 {
@@ -1839,6 +1839,12 @@ a[aria-label="Карточка- монтаж печатных плат."] h3 :fi
 }
 
 .feedback-form__inner-container button {
+  font-family: "Roboto Condensed", "Arial", sans-serif;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 19px;
+  letter-spacing: 0.05em;
   min-width: 265px;
   -webkit-box-flex: 1;
   -ms-flex-positive: 1;

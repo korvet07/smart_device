@@ -2,6 +2,7 @@
   width: 585px;
   min-height: 420px;
   color: $color-default-white;
+  margin-top: 170px;
 
   @media (max-width: $vp-1280) {
     width: auto;
@@ -84,6 +85,12 @@
 }
 
 .feedback-form__inner-container button {
+  font-family: $ff-roboto;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 19px;
+  letter-spacing: 0.05em;
   min-width: 265px;
   flex-grow: 1;
   margin-right: 50px;
