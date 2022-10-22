@@ -1171,10 +1171,6 @@ input[type="checkbox"]:checked + span::after {
   vertical-align: top;
 }
 
-.page-footer__list:first-child {
-  margin-right: 10px;
-}
-
 .page-footer-accordion__wrapper .page-footer__btn {
   color: #ffffff;
   font-family: "Roboto Condensed", "Arial", sans-serif;
@@ -1202,7 +1198,7 @@ input[type="checkbox"]:checked + span::after {
 }
 
 .page-footer__social {
-  margin-right: 7.6vw;
+  margin-right: 7.8vw;
 }
 
 .page-footer__logo {
@@ -1295,6 +1291,7 @@ input[type="checkbox"]:checked + span::after {
   background: transparent;
   border: none;
   margin: 0;
+  margin-right: 35px;
 }
 
 .page-footer-accordion__one a,
@@ -1900,6 +1897,15 @@ a[aria-label="Карточка- монтаж печатных плат."] h3 :fi
   .container {
     padding: 0 30px;
   }
+
+  .page-footer__social {
+    margin: 0;
+  }
+
+  .page-footer-accordion__one,
+  .page-footer-accordion__two {
+    margin: 0;
+  }
 }
 
 @media (max-width: 1023px) {
@@ -1955,7 +1961,6 @@ a[aria-label="Карточка- монтаж печатных плат."] h3 :fi
     -webkit-box-flex: 1;
     -ms-flex-positive: 1;
     flex-grow: 1;
-    margin: 0;
   }
 
   .footer-social__wrapper {
