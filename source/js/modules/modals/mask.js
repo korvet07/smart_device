@@ -1,38 +1,39 @@
-/* eslint-disable no-unused-expressions */
-/* eslint-disable no-invalid-this */
-
 window.addEventListener('DOMContentLoaded', function () {
   [].forEach.call(document.querySelectorAll('input[type="tel"]'), function (input) {
     let keyCode;
     function mask(evt) {
-      evt.keyCode && (keyCode = evt.keyCode);
-      let pos = this.selectionStart;
+      if (evt.keyCode) {
+        keyCode = evt.keyCode;
+      }
+      let pos = evt.currentTarget.selectionStart;
       if (pos < 3) {
         evt.preventDefault();
       }
       let matrix = '+7 (___) ___ ____';
       let i = 0;
       let def = matrix.replace(/\D/g, '');
-      let val = this.value.replace(/\D/g, '');
+      let val = evt.currentTarget.value.replace(/\D/g, '');
       let newValue = matrix.replace(/[_\d]/g, function (a) {
         return i < val.length ? val.charAt(i++) || def.charAt(i) : a;
       });
       i = newValue.indexOf('_');
       if (i !== -1) {
-        i < 5 && (i = 3);
+        if (i < 5) {
+          i = 3;
+        }
         newValue = newValue.slice(0, i);
       }
-      let reg = matrix.substr(0, this.value.length).replace(/_+/g,
+      let reg = matrix.substr(0, evt.currentTarget.value.length).replace(/_+/g,
           function (a) {
             return '\\d{1,' + a.length + '}';
           }).replace(/[+()]/g, '\\$&');
       reg = new RegExp('^' + reg + '$');
-      if (!reg.test(this.value) || this.value.length < 5 || keyCode > 47 && keyCode < 58) {
-        this.value = newValue;
+      if (!reg.test(evt.currentTarget.value) || evt.currentTarget.value.length < 5 || keyCode > 47 && keyCode < 58) {
+        evt.currentTarget.value = newValue;
       }
-      if (evt.type === 'blur' && this.value.length < 5) {
+      if (evt.type === 'blur' && evt.currentTarget.value.length < 5) {
 
-        this.value = '';
+        evt.currentTarget.value = '';
       }
     }
 

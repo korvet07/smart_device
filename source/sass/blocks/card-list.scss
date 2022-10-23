@@ -1,11 +1,9 @@
 .card-list {
-  @include list-default;
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   grid-auto-rows: minmax(650px, auto);
   grid-gap: 50px 85px;
   margin-bottom: 140px;
-
 
   @include vp-1023 {
     grid-template-columns: 1fr;
@@ -29,35 +27,73 @@
   }
 }
 
-a[aria-label="Карточка- монтаж печатных плат."] h3 {
-  & :first-of-type {
-    display: none;
-  }
-
-  @include vp-1023 {
-    & :first-of-type {
-      display: inline-block;
-    }
-
-    & :last-of-type {
-      display: none;
-    }
-  }
-}
-
-.card-list li {
-  display: flex;
-}
-
 .card-list a {
   position: relative;
-  flex-grow: 1;
   padding: 50px 40px 70px;
-  background: rgb(4, 24, 39);
   color: $color-default-white;
+  background: linear-gradient(180deg, rgba(25, 32, 36, 0.7) 71.72%, rgba(25, 32, 36, 0) 100%), url("../../img/product-card/bg-card-desk-2.jpg") center/cover no-repeat;
+
+  @include retina {
+    background: linear-gradient(180deg, rgba(25, 32, 36, 0.7) 71.72%, rgba(25, 32, 36, 0) 100%),
+      url("../../img/product-card/bg-card-desk-2@2x.jpg") center/cover no-repeat;
+  }
 
   @include vp-1023 {
     padding: 40px 45px 70px;
+    background: linear-gradient(180deg, rgba(25, 32, 36, 0.7) 71.72%, rgba(25, 32, 36, 0) 100%),
+      url("../../img/product-card/bg-card-tab-2.jpg") center/cover no-repeat;
+
+    @include retina {
+      background: linear-gradient(180deg, rgba(25, 32, 36, 0.7) 71.72%, rgba(25, 32, 36, 0) 100%),
+        url("../../img/product-card/bg-card-tab-2@2x.jpg") center/cover no-repeat;
+    }
+  }
+
+  @include vp-767 {
+    background: linear-gradient(180deg, rgba(25, 32, 36, 0.7) 71.72%, rgba(25, 32, 36, 0) 100%),
+      url("../../img/product-card/bg-card-mob-2.jpg") center/cover no-repeat;
+
+    @include retina {
+      background: linear-gradient(180deg, rgba(25, 32, 36, 0.7) 71.72%, rgba(25, 32, 36, 0) 100%),
+        url("../../img/product-card/bg-card-mob-2@2x.jpg") center/cover no-repeat;
+    }
+  }
+
+  &::before {
+    content: "";
+    position: absolute;
+    width: 60px;
+    height: 60px;
+    background: $color-page-blue;
+    border-radius: 3px 0 0 0;
+    bottom: 0;
+    right: 0;
+    z-index: 1;
+
+    @include vp-767 {
+      width: 40px;
+      height: 40px;
+    }
+  }
+
+  &::after {
+    content: "";
+    position: absolute;
+    width: 5px;
+    height: 10px;
+    bottom: 23px;
+    right: 25px;
+    margin: auto;
+    border: solid $color-default-white;
+    border-width: 0 2px 2px 0;
+    padding: 4px;
+    transform: rotate(-45deg);
+    z-index: 1;
+
+    @include vp-767 {
+      bottom: 15px;
+      right: 17px;
+    }
   }
 
   &:focus,
@@ -72,57 +108,89 @@ a[aria-label="Карточка- монтаж печатных плат."] h3 {
       outline: 2px solid $color-default-white;
       color: $color-page-blue;
 
-      & div {
-        background-color: $color-page-white;
+      &::after {
+        border: solid $color-page-blue;
+        border-width: 0 2px 2px 0;
+        padding: 4px;
+      }
 
-        &::before {
-          border: solid $color-page-blue;
-          border-width: 0 2px 2px 0;
-          padding: 4px;
-          transform: rotate(-45deg);
-        }
+      &::before {
+        background-color: $color-page-white;
       }
     }
   }
 }
 
-.card-list img {
-  position: absolute;
-  height: 100%;
-  top: 0;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  opacity: 0.5;
+.card-list > a:nth-child(2n) br:first-child {
+  display: none;
+
+  @include vp-1023 {
+    display: block;
+  }
 }
 
-.card-list div {
-  position: absolute;
-  width: 60px;
-  height: 60px;
-  background: $color-page-blue;
-  border-radius: 3px 0 0 0;
-  bottom: 0;
-  right: 0;
+.card-list > a:nth-child(2n) br:last-child {
+  @include vp-1023 {
+    display: none;
+  }
+}
 
-  &::before {
-    content: "";
-    position: absolute;
-    width: 5px;
-    height: 10px;
-    bottom: 0;
-    right: 0;
-    top: 0;
-    left: 0;
-    margin: auto;
-    border: solid $color-default-white;
-    border-width: 0 2px 2px 0;
-    padding: 4px;
-    transform: rotate(-45deg);
+.card-list a:first-child {
+  background: $bg-gradient,
+    url("../../img/product-card/bg-card-desk-1.jpg") center/cover no-repeat;
+
+  @include retina {
+    background: $bg-gradient,
+      url("../../img/product-card/bg-card-desk-1@2x.jpg") center/cover no-repeat;
+  }
+
+  @include vp-1023 {
+    background: $bg-gradient,
+      url("../../img/product-card/bg-card-tab-1.jpg") center/cover no-repeat;
+
+    @include retina {
+      background: $bg-gradient,
+        url("../../img/product-card/bg-card-tab-1@2x.jpg") center/cover no-repeat;
+    }
   }
 
   @include vp-767 {
-    width: 40px;
-    height: 40px;
+    background: $bg-gradient,
+      url("../../img/product-card/bg-card-mob-1.jpg") center/cover no-repeat;
+
+    @include retina {
+      background: $bg-gradient,
+        url("../../img/product-card/bg-card-mob-1@2x.jpg") center/cover no-repeat;
+    }
+  }
+}
+
+.card-list a:last-child {
+  background: $bg-gradient,
+    url("../../img/product-card/bg-card-desk-3.jpg") center/cover no-repeat;
+
+  @include retina {
+    background: $bg-gradient,
+      url("../../img/product-card/bg-card-desk-3@2x.jpg") center/cover no-repeat;
+  }
+
+  @include vp-1023 {
+    background: $bg-gradient,
+      url("../../img/product-card/bg-card-tab-3.jpg") center/cover no-repeat;
+
+    @include retina {
+      background: $bg-gradient,
+        url("../../img/product-card/bg-card-tab-3@2x.jpg") center/cover no-repeat;
+    }
+  }
+
+  @include vp-767 {
+    background: $bg-gradient,
+      url("../../img/product-card/bg-card-mob-3.jpg") center/cover no-repeat;
+
+    @include retina {
+      background: $bg-gradient,
+        url("../../img/product-card/bg-card-mob-3@2x.jpg") center/cover no-repeat;
+    }
   }
 }

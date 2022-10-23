@@ -4,7 +4,7 @@
   top: 0;
   left: 0;
   right: 0;
-  z-index: 1;
+  z-index: 2;
   padding-bottom: 20px;
 }
 
@@ -30,6 +30,7 @@
 }
 
 .page-nav__item:last-child {
+  min-width: 160px;
   margin-right: 5%;
 
   @include vp-1023 {
@@ -39,6 +40,10 @@
 
 .page-nav__item:first-child {
   margin-right: 160px;
+
+  @include vp-1023 {
+    margin-right: auto;
+  }
 }
 
 .page-nav__link svg {
@@ -46,9 +51,15 @@
   margin-right: 15px;
 }
 
-.page-nav__item:nth-child(3) {
+.page-nav__item:nth-child(3n) {
   margin-left: 30px;
   margin-right: 153px;
+
+
+  @include vp-1023 {
+    margin-left: 20px;
+    margin-right: 10px;
+  }
 }
 
 .page-nav__link:hover svg {

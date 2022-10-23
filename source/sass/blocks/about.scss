@@ -29,7 +29,7 @@
   transition: $trans-default;
 }
 
-.about__content:has(.is-active) p:last-of-type {
+.about__content--active p:last-of-type {
   height: auto;
   opacity: 1;
   font-size: 16px;
@@ -102,7 +102,7 @@
   }
 }
 
-.about__content .is-active {
+.about__content--active button {
   &::after {
     content: attr(data-button-content-isactive);
   }
