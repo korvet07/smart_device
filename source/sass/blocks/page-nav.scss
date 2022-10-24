@@ -78,6 +78,10 @@
 
     margin-right: 10px;
   }
+
+  @include vp-767 {
+    margin-right: 0;
+  }
 }
 
 .page-nav__item:nth-child(2n) {
@@ -95,6 +99,10 @@
 .page-nav__item:nth-child(3n),
 .page-nav__item:nth-child(2n) {
   margin-bottom: 20px;
+
+  @include vp-767 {
+    margin-bottom: 5px;
+  }
 }
 
 .page-nav__link:hover svg {
