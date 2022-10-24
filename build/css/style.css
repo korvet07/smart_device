@@ -1159,6 +1159,10 @@ button,
   padding: 0;
 }
 
+.our-office__addres {
+  max-width: 350px;
+}
+
 .main-screen {
   color: #f2f5f7;
   -webkit-box-flex: 1;
@@ -1670,7 +1674,7 @@ button,
 
 .modal {
   position: fixed;
-  top: 0;
+  top: -150px;
   right: 0;
   bottom: 0;
   left: 0;
@@ -1878,6 +1882,27 @@ button,
   padding: 25px 15px;
   margin-bottom: 25px;
   border: none;
+  background: rgba(4, 20, 39, 0.15);
+}
+
+.modal__form textarea::-webkit-input-placeholder {
+  color: #ffffff;
+}
+
+.modal__form textarea::-moz-placeholder {
+  color: #ffffff;
+}
+
+.modal__form textarea:-ms-input-placeholder {
+  color: #ffffff;
+}
+
+.modal__form textarea::-ms-input-placeholder {
+  color: #ffffff;
+}
+
+.modal__form textarea::placeholder {
+  color: #ffffff;
 }
 
 .modal h2 {
@@ -1939,30 +1964,30 @@ button,
 }
 
 @media (min-width: 1024px) {
-  .card-list a:first-child {
-    background: url("../img/product-card/bg-card-desk-1.jpg") center/cover no-repeat;
-  }
-
   .card-list a:nth-child(2n) {
     background: url("../img/product-card/bg-card-desk-2.jpg") center/cover no-repeat;
   }
 
-  .card-list a:last-child {
+  .card-list a:nth-child(2n +1) {
     background: url("../img/product-card/bg-card-desk-3.jpg") center/cover no-repeat;
+  }
+
+  .card-list a:first-child {
+    background: url("../img/product-card/bg-card-desk-1.jpg") center/cover no-repeat;
   }
 }
 
 @media (min-width: 1024px) and (-webkit-min-device-pixel-ratio: 1.5), (min-width: 1024px) and (-o-min-device-pixel-ratio: 3/2), (min-width: 1024px) and (min-resolution: 144dpi), (min-width: 1024px) and (min-resolution: 1.5dppx) {
-  .card-list a:first-child {
-    background: url("../img/product-card/bg-card-desk-1@2x.jpg") center/cover no-repeat;
-  }
-
   .card-list a:nth-child(2n) {
     background: url("../img/product-card/bg-card-desk-2@2x.jpg") center/cover no-repeat;
   }
 
-  .card-list a:last-child {
+  .card-list a:nth-child(2n +1) {
     background: url("../img/product-card/bg-card-desk-3@2x.jpg") center/cover no-repeat;
+  }
+
+  .card-list a:first-child {
+    background: url("../img/product-card/bg-card-desk-1@2x.jpg") center/cover no-repeat;
   }
 }
 
@@ -2219,16 +2244,16 @@ button,
     display: none;
   }
 
-  .card-list a:first-child {
-    background: url("../img/product-card/bg-card-tab-1.jpg") center/cover no-repeat;
-  }
-
   .card-list a:nth-child(2n) {
     background: url("../img/product-card/bg-card-tab-2.jpg") center/cover no-repeat;
   }
 
-  .card-list a:last-child {
+  .card-list a:nth-child(2n +1) {
     background: url("../img/product-card/bg-card-tab-3.jpg") center/cover no-repeat;
+  }
+
+  .card-list a:first-child {
+    background: url("../img/product-card/bg-card-tab-1.jpg") center/cover no-repeat;
   }
 
   .feedback {
@@ -2272,16 +2297,16 @@ button,
     background: linear-gradient(180deg, rgba(25, 32, 36, 0.7) 71.72%, rgba(25, 32, 36, 0) 100%), url("../img/about-bg-tab@2x.jpg") center/cover no-repeat;
   }
 
-  .card-list a:first-child {
-    background: url("../img/product-card/bg-card-tab-1@2x.jpg") center/cover no-repeat;
-  }
-
   .card-list a:nth-child(2n) {
     background: url("../img/product-card/bg-card-tab-2@2x.jpg") center/cover no-repeat;
   }
 
-  .card-list a:last-child {
+  .card-list a:nth-child(2n +1) {
     background: url("../img/product-card/bg-card-tab-3@2x.jpg") center/cover no-repeat;
+  }
+
+  .card-list a:first-child {
+    background: url("../img/product-card/bg-card-tab-1@2x.jpg") center/cover no-repeat;
   }
 }
 
@@ -2400,16 +2425,16 @@ button,
     right: 17px;
   }
 
-  .card-list a:first-child {
-    background: url("../img/product-card/bg-card-mob-1.jpg") center/cover no-repeat;
-  }
-
   .card-list a:nth-child(2n) {
     background: url("../img/product-card/bg-card-mob-2.jpg") center/cover no-repeat;
   }
 
-  .card-list a:last-child {
+  .card-list a:nth-child(2n +1) {
     background: url("../img/product-card/bg-card-mob-3.jpg") center/cover no-repeat;
+  }
+
+  .card-list a:first-child {
+    background: url("../img/product-card/bg-card-mob-1.jpg") center/cover no-repeat;
   }
 
   .feedback-form__wrapper {
@@ -2456,16 +2481,16 @@ button,
     background: linear-gradient(180deg, rgba(25, 32, 36, 0.7) 71.72%, rgba(25, 32, 36, 0) 100%), url("../img/about-bg-mob@2x.jpg") center/cover no-repeat;
   }
 
-  .card-list a:first-child {
-    background: url("../img/product-card/bg-card-mob-1@2x.jpg") center/cover no-repeat;
-  }
-
   .card-list a:nth-child(2n) {
     background: url("../img/product-card/bg-card-mob-2@2x.jpg") center/cover no-repeat;
   }
 
-  .card-list a:last-child {
+  .card-list a:nth-child(2n +1) {
     background: url("../img/product-card/bg-card-mob-3@2x.jpg") center/cover no-repeat;
+  }
+
+  .card-list a:first-child {
+    background: url("../img/product-card/bg-card-mob-1@2x.jpg") center/cover no-repeat;
   }
 }
 
