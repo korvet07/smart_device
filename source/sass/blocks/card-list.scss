@@ -8,7 +8,8 @@
   @include vp-1023 {
     grid-template-columns: 1fr;
     grid-auto-rows: minmax(250px, auto);
-    grid-column: 0;
+    grid-column-gap: 0;
+    grid-row-gap: 30px;
   }
 }
 
@@ -29,8 +30,12 @@
 
 .card-list a {
   position: relative;
-  padding: 50px 40px 70px;
+  padding: 38px 45px 70px;
   color: $color-default-white;
+
+  @include vp-1023 {
+    padding: 40px 45px 70px;
+  }
 
   &::before {
     content: "";
@@ -109,93 +114,80 @@
 }
 
 .card-list a:first-child {
+  @media (min-width: 1024px) {
+    background: url("../img/product-card/bg-card-desk-1.jpg") center/cover no-repeat;
 
-  background: $bg-gradient,
-    url("../img/product-card/bg-card-desk-1.jpg") center/cover no-repeat;
-
-  @include retina {
-    background: $bg-gradient,
-      url("../img/product-card/bg-card-desk-1@2x.jpg") center/cover no-repeat;
+    @include retina {
+      background: url("../img/product-card/bg-card-desk-1@2x.jpg") center/cover no-repeat;
+    }
   }
 
   @include vp-1023 {
-    background: $bg-gradient,
-      url("../img/product-card/bg-card-tab-1.jpg") center/cover no-repeat;
+    background: url("../img/product-card/bg-card-tab-1.jpg") center/cover no-repeat;
 
     @include retina {
-      background: $bg-gradient,
-        url("../img/product-card/bg-card-tab-1@2x.jpg") center/cover no-repeat;
+      background: url("../img/product-card/bg-card-tab-1@2x.jpg") center/cover no-repeat;
     }
   }
 
   @include vp-767 {
-    background: $bg-gradient,
-      url("../img/product-card/bg-card-mob-1.jpg") center/cover no-repeat;
+    background: url("../img/product-card/bg-card-mob-1.jpg") center/cover no-repeat;
 
     @include retina {
-      background: $bg-gradient,
-        url("../img/product-card/bg-card-mob-1@2x.jpg") center/cover no-repeat;
+      background: url("../img/product-card/bg-card-mob-1@2x.jpg") center/cover no-repeat;
     }
   }
 }
 
 .card-list a:nth-child(2n) {
-  background: linear-gradient(180deg, rgba(25, 32, 36, 0.7) 71.72%, rgba(25, 32, 36, 0) 100%),
-    url("../img/product-card/bg-card-desk-2.jpg") center/cover no-repeat;
+  @media (min-width: 1024px) {
+    background: url("../img/product-card/bg-card-desk-2.jpg") center/cover no-repeat;
 
-  @include retina {
-    background: linear-gradient(180deg, rgba(25, 32, 36, 0.7) 71.72%, rgba(25, 32, 36, 0) 100%),
-      url("../img/product-card/bg-card-desk-2@2x.jpg") center/cover no-repeat;
+    @include retina {
+      background: url("../img/product-card/bg-card-desk-2@2x.jpg") center/cover no-repeat;
+    }
   }
 
   @include vp-1023 {
-    padding: 40px 45px 70px;
-    background: linear-gradient(180deg, rgba(25, 32, 36, 0.7) 71.72%, rgba(25, 32, 36, 0) 100%),
-      url("../img/product-card/bg-card-tab-2.jpg") center/cover no-repeat;
+
+    background: url("../img/product-card/bg-card-tab-2.jpg") center/cover no-repeat;
 
     @include retina {
-      background: linear-gradient(180deg, rgba(25, 32, 36, 0.7) 71.72%, rgba(25, 32, 36, 0) 100%),
-        url("../img/product-card/bg-card-tab-2@2x.jpg") center/cover no-repeat;
+      background: url("../img/product-card/bg-card-tab-2@2x.jpg") center/cover no-repeat;
     }
   }
 
   @include vp-767 {
-    background: linear-gradient(180deg, rgba(25, 32, 36, 0.7) 71.72%, rgba(25, 32, 36, 0) 100%),
-      url("../img/product-card/bg-card-mob-2.jpg") center/cover no-repeat;
+    background: url("../img/product-card/bg-card-mob-2.jpg") center/cover no-repeat;
 
     @include retina {
-      background: linear-gradient(180deg, rgba(25, 32, 36, 0.7) 71.72%, rgba(25, 32, 36, 0) 100%),
-        url("../img/product-card/bg-card-mob-2@2x.jpg") center/cover no-repeat;
+      background: url("../img/product-card/bg-card-mob-2@2x.jpg") center/cover no-repeat;
     }
   }
 }
 
 .card-list a:last-child {
-  background: $bg-gradient,
-    url("../img/product-card/bg-card-desk-3.jpg") center/cover no-repeat;
+  @media (min-width: 1024px) {
+    background: url("../img/product-card/bg-card-desk-3.jpg") center/cover no-repeat;
 
-  @include retina {
-    background: $bg-gradient,
-      url("../img/product-card/bg-card-desk-3@2x.jpg") center/cover no-repeat;
+    @include retina {
+      background: url("../img/product-card/bg-card-desk-3@2x.jpg") center/cover no-repeat;
+    }
   }
 
   @include vp-1023 {
-    background: $bg-gradient,
-      url("../img/product-card/bg-card-tab-3.jpg") center/cover no-repeat;
+    background: url("../img/product-card/bg-card-tab-3.jpg") center/cover no-repeat;
 
     @include retina {
-      background: $bg-gradient,
-        url("../img/product-card/bg-card-tab-3@2x.jpg") center/cover no-repeat;
+      background: url("../img/product-card/bg-card-tab-3@2x.jpg") center/cover no-repeat;
     }
   }
 
   @include vp-767 {
-    background: $bg-gradient,
-      url("../img/product-card/bg-card-mob-3.jpg") center/cover no-repeat;
+    background: url("../img/product-card/bg-card-mob-3.jpg") center/cover no-repeat;
 
     @include retina {
-      background: $bg-gradient,
-        url("../img/product-card/bg-card-mob-3@2x.jpg") center/cover no-repeat;
+      background: url("../img/product-card/bg-card-mob-3@2x.jpg") center/cover no-repeat;
     }
   }
 }

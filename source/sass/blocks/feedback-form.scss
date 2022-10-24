@@ -10,6 +10,7 @@
 
   @include vp-1023 {
     flex-grow: 1;
+    margin-top: 45px;
   }
 }
 
@@ -20,11 +21,19 @@
   font-size: 36px;
   line-height: 51px;
   margin: 0;
+
+  @include vp-1023 {
+    margin-bottom: -10px;
+  }
 }
 
 .feedback-form p {
   line-height: 22px;
   margin-bottom: 35px;
+
+  @include vp-1023 {
+    margin-bottom: 27px;
+  }
 }
 
 .feedback-form__wrapper {
@@ -72,6 +81,11 @@
   margin: 20px 0 27px;
   border: none;
   padding: 25px 15px;
+
+  @include vp-1023 {
+    margin-bottom: 32px;
+    padding-top: 30px;
+  }
 
   &::placeholder {
     font-family: $ff-mono;
