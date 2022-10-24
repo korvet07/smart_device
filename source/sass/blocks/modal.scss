@@ -201,12 +201,12 @@
 
 .modal__checkbox-input-wrapper {
   &::before {
-    top: 3px;
+    top: 13px;
   }
 }
 
 .modal__checkbox-input-wrapper:has([type="checkbox"]:checked) {
   &::after {
-    top: 7px;
+    top: 17px;
   }
 }

@@ -1,13 +1,14 @@
 .checkbox-input-wrapper {
   position: relative;
-  padding-left: 20px;
+  padding: 10px 10px 10px 20px;
   align-self: end;
+  cursor: pointer;
 
   &::before {
     content: "";
     position: absolute;
     left: 0;
-    top: 7px;
+    top: 17px;
     width: 15px;
     height: 15px;
     background: #00b3ff;
@@ -23,8 +24,14 @@
     width: 9px;
     height: 6px;
     left: 3px;
-    top: 11px;
+    top: 22px;
 
     background: url("../../img/svg/check.svg") center no-repeat;
   }
+}
+
+.checkbox-input-wrapper:has([type="checkbox"]:focus),
+.checkbox-input-wrapper:has([type="checkbox"]:active) {
+  outline: 2px solid $color-default-black;
+  border-radius: 3px;
 }

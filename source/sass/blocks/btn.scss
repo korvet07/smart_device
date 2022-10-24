@@ -17,6 +17,7 @@
   border-radius: 3px;
   cursor: pointer;
   transition: opacity $trans-default;
+  user-select: none;
 
   &--red {
     background-color: $color-torch-red;
@@ -74,6 +75,12 @@
         color: $color-default-black;
         outline: 3px solid $color-default-black;
       }
+    }
+
+    &:focus,
+    &:active {
+      color: $color-default-black;
+      border: 3px solid $color-default-black;
     }
   }
 }

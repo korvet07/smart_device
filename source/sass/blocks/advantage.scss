@@ -7,7 +7,8 @@
   margin-bottom: 120px;
 
   @include vp-1023 {
-    grid-template-rows: minmax(320px, auto) minmax(320px, auto);
+    grid-template-rows: minmax(355px, auto) minmax(355px, auto);
+    margin-bottom: 90px;
   }
 
   @include vp-767 {
@@ -23,7 +24,7 @@
   border: 1px solid #ebebeb;
 
   @include vp-1023 {
-    padding: 40px 30px 35px 46px;
+    padding: 40px 35px 5px 46px;
   }
 
   @include vp-767 {
@@ -48,7 +49,6 @@
 @media (hover: hover) {
   .advantage__item {
     &:hover {
-      cursor: pointer;
       background-color: $color-page-blue;
     }
 
@@ -72,6 +72,10 @@
   line-height: 34px;
   margin-bottom: 0;
 
+  @include vp-1023 {
+    margin-top: 10px;
+  }
+
   @include vp-767 {
     font-size: 20px;
     line-height: 140%;
@@ -81,4 +85,8 @@
 .advantage__item p {
   color: #041827;
   line-height: 135%;
+
+  @include vp-1023 {
+    margin-top: 8px;
+  }
 }

@@ -24,15 +24,31 @@
 
 .page-footer__list {
   @include list-default;
-  display: inline-block;
-  vertical-align: top;
+  max-width: 215px;
 
   @include vp-1023 {
-    display: block;
+    max-width: none;
+    flex-basis: 100%;
+    padding-right: 50px;
+  }
+}
+
+.page-footer__list:first-child {
+  margin-right: 30px;
+}
+
+.page-footer__link-wrapper {
+  display: flex;
+  flex-wrap: nowrap;
+
+  @include vp-1023 {
+    flex-wrap: wrap;
+    flex-direction: row;
   }
 }
 
 .page-footer__social {
+  max-width: 215px;
   margin-right: 7.8vw;
 
   @include vp-1279 {
@@ -40,12 +56,14 @@
   }
 
   @include vp-1023 {
+    max-width: none;
     flex-basis: 100%;
     flex-grow: 1;
   }
 }
 
 .page-footer__logo {
+  min-width: 215px;
   width: 215px;
   height: 55px;
 
