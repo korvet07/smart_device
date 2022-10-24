@@ -6,12 +6,12 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description" content="Smart Device">
-  <link rel="manifest" href="manifest.webmanifest">
+  <link rel="manifest" href="manifest.webmanifest" crossorigin="use-credentials">
   <link rel="icon" href="favicon.ico"> <!-- 32×32 -->
   <link rel="apple-touch-icon" href="favicon/apple-icon-180x180.png"> <!-- 180×180 -->
-  <link rel="preload" href="fonts/PTMono-Regular.woff2" as="font" type="font/woff2" crossorigin="anonymous">
-  <link rel="preload" href="fonts/roboto-condensed-bold.woff2" as="font" type="font/woff2" crossorigin="anonymous">
-  <link rel="preload" href="fonts/roboto-condensed-reg.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+  <link rel="preload" href="fonts/PTMono-Regular.woff2" as="font" crossorigin="anonymous">
+  <link rel="preload" href="fonts/roboto-condensed-bold.woff2" as="font" crossorigin="anonymous">
+  <link rel="preload" href="fonts/roboto-condensed-reg.woff2" as="font" crossorigin="anonymous">
   <title>Smart Device</title>
   <link rel="stylesheet" href="css/style.min.css">
 </head>
@@ -137,8 +137,7 @@
             наших клиентов.
           </p>
           <button onclick="about_content.classList.toggle('about__content--active')" type="button"
-            data-button-content="подробнее"
-            data-button-content-isactive="свернуть"></button>
+            data-button-content="подробнее" data-button-content-isactive="свернуть" aria-label="Показать ещё."></button>
         </div>
       </div>
     </section>
@@ -172,7 +171,7 @@
           <p class="feedback__discription">Мы&nbsp;проконсультируем Вас&nbsp;бесплатно</p>
           <fieldset class="feedback-form__wrapper">
             <label>
-              <input type="text" name="user-name-feedback" placeholder="Имя" required autofocus tabindex="6">
+              <input type="text" name="user-name-feedback" placeholder="Имя" required tabindex="6">
             </label>
             <label>
               <input type="tel" name="user-phone" pattern="^((8|\+7)[\- ]?)?(\(?\d{3}\)?[\- ]?)?[\d\- ]{9,10}$"
@@ -181,8 +180,8 @@
           </fieldset>
           <textarea name="user-guestion" placeholder="Ваш вопрос" tabindex="8"></textarea>
           <div class="feedback-form__inner-container">
-            <button class="btn btn--black" type="submit" tabindex="10">Задать вопрос</button>
-            <div class="checkbox-input-wrapper feedback-form__checkbox-container" >
+            <button class="btn btn--black" type="submit" tabindex="10" aria-label="Задать вопрос.">Задать вопрос</button>
+            <div class="checkbox-input-wrapper feedback-form__checkbox-container">
               <input class="visually-hidden" type="checkbox" name="user-consent" id="user-consent-feedback" required
                 tabindex="9">
               <label for="user-consent-feedback">Я&nbsp;согласен на&nbsp;обработку<br> персональных данных</label>
@@ -231,7 +230,7 @@
         <div class="accordion-container page-footer-accordion__wrapper">
           <div class="ac page-footer-accordion__one">
             <h2 class="ac-header page-footer__title">
-              <button type="button" class="ac-trigger page-footer-accordion__btn">Разделы сайта</button>
+              <button type="button" class="ac-trigger page-footer-accordion__btn" aria-label="Разделы сайта.">Разделы сайта</button>
             </h2>
             <div class="ac-panel page-footer__link-wrapper">
               <ul class="page-footer__list">
@@ -243,7 +242,7 @@
                 </li>
                 <li class="page-footer__item ac-text">
                   <a class="page-footer__link" href="#"
-                    aria-label="Производство печатных плат">Производство&ensp;печатных<br> &ensp;плат</a>
+                    aria-label="Производство печатных плат">Производство&ensp;печатных<br> плат</a>
                 </li>
                 <li class="page-footer__item ac-text">
                   <a class="page-footer__link" href="#" aria-label="Монтаж печатных плат">Монтаж печатных плат</a>
@@ -264,7 +263,7 @@
           </div>
           <div class="ac page-footer-accordion__two">
             <h2 class="ac-header page-footer__title">
-              <button type="button" class="ac-trigger page-footer-accordion__btn">Наш офис</button>
+              <button type="button" class="ac-trigger page-footer-accordion__btn" aria-label="Наш офис.">Наш офис</button>
             </h2>
             <div class="ac-panel">
               <ul class="our-office">
@@ -299,13 +298,13 @@
           <form action="https://echo.htmlacademy.ru/" class="modal__form" id="modal-form" method="post"
             enctype="multipart/form-data" target="_blank">
             <label>
-              <input type="text" name="user-name" id="user-name" placeholder="Имя" required tabindex="1">
+              <input id="name_user" type="text" name="user-name" id="user-name" placeholder="Имя" required tabindex="1">
             </label>
             <label>
               <input type="tel" name="user-tel" id="user-tel" placeholder="Телефон" required tabindex="2">
             </label>
             <textarea name="user-question" id="user-question" placeholder="Ваш вопрос" tabindex="3"></textarea>
-            <button class="btn modal__submit-btn btn--black" type="submit" tabindex="5">отправить</button>
+            <button class="btn modal__submit-btn btn--black" type="submit" tabindex="5" aria-label="Отправить.">отправить</button>
           </form>
           <div class="checkbox-input-wrapper modal__checkbox-input-wrapper">
             <input id="user-content" class="visually-hidden" type="checkbox" form="modal-form" name="user-consent"
@@ -313,7 +312,7 @@
             <label for="user-content">Я&nbsp;согласен на&nbsp;обработку персональных данных</label>
           </div>
         </div>
-        <button class="modal__close-btn btn-reset" type="button" aria-label="Закрыть попап" data-close-modal >
+        <button class="modal__close-btn btn-reset" type="button" aria-label="Закрыть попап" data-close-modal>
           <svg width="15" height="15">
             <use xlink:href="img/sprite_auto.svg#icon-close"></use>
           </svg>

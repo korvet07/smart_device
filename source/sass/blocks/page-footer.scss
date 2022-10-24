@@ -14,6 +14,10 @@
   }
 }
 
+.page-footer__link {
+  padding-left: 0;
+}
+
 .page-footer__wrapper {
   display: flex;
 
@@ -56,6 +60,7 @@
   }
 
   @include vp-1023 {
+    margin-right: 0;
     max-width: none;
     flex-basis: 100%;
     flex-grow: 1;
@@ -74,4 +79,13 @@
 //  переопределение стилей библиотеки accordion-js
 .page-footer__list .page-footer__item:has(.page-footer__link) {
   padding: 0;
+}
+
+.page-footer .page-footer__title {
+  margin-left: -9px;
+  margin-bottom: 10px;
+}
+
+.page-footer__list li {
+  margin-bottom: 15px;
 }

@@ -476,7 +476,7 @@ template {
   font-weight: 400;
   font-family: "Pt Mono";
   font-display: swap;
-  src: url("../../fonts/PTMono-Regular.woff2") format("woff2"), url("../../fonts/PTMono-Regular.woff") format("woff");
+  src: url("../fonts/PTMono-Regular.woff2") format("woff2"), url("../fonts/PTMono-Regular.woff") format("woff");
 }
 
 @font-face {
@@ -484,7 +484,7 @@ template {
   font-weight: 400;
   font-family: "Roboto Condensed";
   font-display: swap;
-  src: url("../../fonts/roboto-condensed-reg.woff2") format("woff2"), url("../../fonts/roboto-condensed-reg.woff") format("woff");
+  src: url("../fonts/roboto-condensed-reg.woff2") format("woff2"), url("../fonts/roboto-condensed-reg.woff") format("woff");
 }
 
 @font-face {
@@ -492,7 +492,7 @@ template {
   font-weight: 700;
   font-family: "Roboto Condensed";
   font-display: swap;
-  src: url("../../fonts/roboto-condensed-bold.woff2") format("woff2"), url("../../fonts/roboto-condensed-bold.woff") format("woff");
+  src: url("../fonts/roboto-condensed-bold.woff2") format("woff2"), url("../fonts/roboto-condensed-bold.woff") format("woff");
 }
 
 *,
@@ -833,7 +833,7 @@ button,
   height: 6px;
   left: 3px;
   top: 22px;
-  background: url("../../img/svg/check.svg") center no-repeat;
+  background: url("../img/svg/check.svg") center no-repeat;
 }
 
 .checkbox-input-wrapper:has([type="checkbox"]:focus),
@@ -950,6 +950,10 @@ button,
   padding: 55px 0 35px 0;
 }
 
+.page-footer__link {
+  padding-left: 0;
+}
+
 .page-footer__wrapper {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -988,6 +992,15 @@ button,
 
 .page-footer__list .page-footer__item:has(.page-footer__link) {
   padding: 0;
+}
+
+.page-footer .page-footer__title {
+  margin-left: -9px;
+  margin-bottom: 10px;
+}
+
+.page-footer__list li {
+  margin-bottom: 15px;
 }
 
 .footer-social__list {
@@ -1063,6 +1076,7 @@ button,
   font-size: 16px;
   line-height: 135%;
   color: rgba(255, 255, 255, 0.7);
+  padding-left: 0;
 }
 
 .page-footer-accordion__one a:focus,
@@ -1152,9 +1166,9 @@ button,
   flex-grow: 1;
   min-height: 755px;
   margin-bottom: 120px;
-  background: -webkit-gradient(linear, left top, left bottom, color-stop(71.72%, rgba(25, 32, 36, 0.7)), to(rgba(25, 32, 36, 0))), url("../../img/about-bg-desk.jpg") center/cover no-repeat;
-  background: -o-linear-gradient(top, rgba(25, 32, 36, 0.7) 71.72%, rgba(25, 32, 36, 0) 100%), url("../../img/about-bg-desk.jpg") center/cover no-repeat;
-  background: linear-gradient(180deg, rgba(25, 32, 36, 0.7) 71.72%, rgba(25, 32, 36, 0) 100%), url("../../img/about-bg-desk.jpg") center/cover no-repeat;
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(71.72%, rgba(25, 32, 36, 0.7)), to(rgba(25, 32, 36, 0))), url("../img/about-bg-desk.jpg") center/cover no-repeat;
+  background: -o-linear-gradient(top, rgba(25, 32, 36, 0.7) 71.72%, rgba(25, 32, 36, 0) 100%), url("../img/about-bg-desk.jpg") center/cover no-repeat;
+  background: linear-gradient(180deg, rgba(25, 32, 36, 0.7) 71.72%, rgba(25, 32, 36, 0) 100%), url("../img/about-bg-desk.jpg") center/cover no-repeat;
   background-size: 100vw 880px;
   background-position-y: -5%;
 }
@@ -1450,7 +1464,6 @@ button,
 }
 
 .feedback__wrapper {
-  min-height: 840px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1647,12 +1660,12 @@ button,
 
 .feedback-form__checkbox-container::before {
   left: 5px;
-  top: 17px;
+  top: 13px;
 }
 
 .feedback-form__checkbox-container:has([type="checkbox"]:checked)::after {
   left: 8px;
-  top: 22px;
+  top: 18px;
 }
 
 .modal {
@@ -2075,12 +2088,22 @@ button,
   }
 
   .page-footer__social {
+    margin-right: 0;
     max-width: none;
     -ms-flex-preferred-size: 100%;
     flex-basis: 100%;
     -webkit-box-flex: 1;
     -ms-flex-positive: 1;
     flex-grow: 1;
+  }
+
+  .footer-social__list {
+    padding: 5px 0  15px 10px;
+    min-height: 85px;
+  }
+
+  .footer-social__item:not(:last-child) {
+    margin-right: 12px;
   }
 
   .footer-social__wrapper {
@@ -2093,9 +2116,9 @@ button,
   }
 
   .main-screen {
-    background: -webkit-gradient(linear, left top, left bottom, color-stop(71.72%, rgba(25, 32, 36, 0.7)), to(rgba(25, 32, 36, 0))), url("../../img/about-bg-tab.jpg") center/cover no-repeat;
-    background: -o-linear-gradient(top, rgba(25, 32, 36, 0.7) 71.72%, rgba(25, 32, 36, 0) 100%), url("../../img/about-bg-tab.jpg") center/cover no-repeat;
-    background: linear-gradient(180deg, rgba(25, 32, 36, 0.7) 71.72%, rgba(25, 32, 36, 0) 100%), url("../../img/about-bg-tab.jpg") center/cover no-repeat;
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(71.72%, rgba(25, 32, 36, 0.7)), to(rgba(25, 32, 36, 0))), url("../img/about-bg-tab.jpg") center/cover no-repeat;
+    background: -o-linear-gradient(top, rgba(25, 32, 36, 0.7) 71.72%, rgba(25, 32, 36, 0) 100%), url("../img/about-bg-tab.jpg") center/cover no-repeat;
+    background: linear-gradient(180deg, rgba(25, 32, 36, 0.7) 71.72%, rgba(25, 32, 36, 0) 100%), url("../img/about-bg-tab.jpg") center/cover no-repeat;
   }
 
   .main-screen {
@@ -2199,6 +2222,7 @@ button,
 
   .feedback {
     background: #00b2ff;
+    min-height: 580px;
   }
 
   .feedback__img-wrapper {
@@ -2224,13 +2248,17 @@ button,
     margin-bottom: 32px;
     padding-top: 30px;
   }
+
+  .feedback-form__inner-container button {
+    margin-right: 80px;
+  }
 }
 
 @media (max-width: 1023px) and (-webkit-min-device-pixel-ratio: 1.5), (max-width: 1023px) and (-o-min-device-pixel-ratio: 3/2), (max-width: 1023px) and (min-resolution: 144dpi), (max-width: 1023px) and (min-resolution: 1.5dppx) {
   .main-screen {
-    background: -webkit-gradient(linear, left top, left bottom, color-stop(71.72%, rgba(25, 32, 36, 0.7)), to(rgba(25, 32, 36, 0))), url("../../img/about-bg-tab@2x.jpg") center/cover no-repeat;
-    background: -o-linear-gradient(top, rgba(25, 32, 36, 0.7) 71.72%, rgba(25, 32, 36, 0) 100%), url("../../img/about-bg-tab@2x.jpg") center/cover no-repeat;
-    background: linear-gradient(180deg, rgba(25, 32, 36, 0.7) 71.72%, rgba(25, 32, 36, 0) 100%), url("../../img/about-bg-tab@2x.jpg") center/cover no-repeat;
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(71.72%, rgba(25, 32, 36, 0.7)), to(rgba(25, 32, 36, 0))), url("../img/about-bg-tab@2x.jpg") center/cover no-repeat;
+    background: -o-linear-gradient(top, rgba(25, 32, 36, 0.7) 71.72%, rgba(25, 32, 36, 0) 100%), url("../img/about-bg-tab@2x.jpg") center/cover no-repeat;
+    background: linear-gradient(180deg, rgba(25, 32, 36, 0.7) 71.72%, rgba(25, 32, 36, 0) 100%), url("../img/about-bg-tab@2x.jpg") center/cover no-repeat;
   }
 
   .card-list a:first-child {
@@ -2308,9 +2336,9 @@ button,
   }
 
   .main-screen {
-    background: -webkit-gradient(linear, left top, left bottom, color-stop(71.72%, rgba(25, 32, 36, 0.7)), to(rgba(25, 32, 36, 0))), url("../../img/about-bg-mob.jpg") center/cover no-repeat;
-    background: -o-linear-gradient(top, rgba(25, 32, 36, 0.7) 71.72%, rgba(25, 32, 36, 0) 100%), url("../../img/about-bg-mob.jpg") center/cover no-repeat;
-    background: linear-gradient(180deg, rgba(25, 32, 36, 0.7) 71.72%, rgba(25, 32, 36, 0) 100%), url("../../img/about-bg-mob.jpg") center/cover no-repeat;
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(71.72%, rgba(25, 32, 36, 0.7)), to(rgba(25, 32, 36, 0))), url("../img/about-bg-mob.jpg") center/cover no-repeat;
+    background: -o-linear-gradient(top, rgba(25, 32, 36, 0.7) 71.72%, rgba(25, 32, 36, 0) 100%), url("../img/about-bg-mob.jpg") center/cover no-repeat;
+    background: linear-gradient(180deg, rgba(25, 32, 36, 0.7) 71.72%, rgba(25, 32, 36, 0) 100%), url("../img/about-bg-mob.jpg") center/cover no-repeat;
   }
 
   .main-screen h1 {
@@ -2412,9 +2440,9 @@ button,
 
 @media (max-width: 767px) and (-webkit-min-device-pixel-ratio: 1.5), (max-width: 767px) and (-o-min-device-pixel-ratio: 3/2), (max-width: 767px) and (min-resolution: 144dpi), (max-width: 767px) and (min-resolution: 1.5dppx) {
   .main-screen {
-    background: -webkit-gradient(linear, left top, left bottom, color-stop(71.72%, rgba(25, 32, 36, 0.7)), to(rgba(25, 32, 36, 0))), url("../../img/about-bg-mob@2x.jpg") center/cover no-repeat;
-    background: -o-linear-gradient(top, rgba(25, 32, 36, 0.7) 71.72%, rgba(25, 32, 36, 0) 100%), url("../../img/about-bg-mob@2x.jpg") center/cover no-repeat;
-    background: linear-gradient(180deg, rgba(25, 32, 36, 0.7) 71.72%, rgba(25, 32, 36, 0) 100%), url("../../img/about-bg-mob@2x.jpg") center/cover no-repeat;
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(71.72%, rgba(25, 32, 36, 0.7)), to(rgba(25, 32, 36, 0))), url("../img/about-bg-mob@2x.jpg") center/cover no-repeat;
+    background: -o-linear-gradient(top, rgba(25, 32, 36, 0.7) 71.72%, rgba(25, 32, 36, 0) 100%), url("../img/about-bg-mob@2x.jpg") center/cover no-repeat;
+    background: linear-gradient(180deg, rgba(25, 32, 36, 0.7) 71.72%, rgba(25, 32, 36, 0) 100%), url("../img/about-bg-mob@2x.jpg") center/cover no-repeat;
   }
 
   .card-list a:first-child {
@@ -2472,8 +2500,8 @@ button,
 
 @media (-webkit-min-device-pixel-ratio: 1.5), (-o-min-device-pixel-ratio: 3/2), (min-resolution: 144dpi), (min-resolution: 1.5dppx) {
   .main-screen {
-    background: -webkit-gradient(linear, left top, left bottom, color-stop(71.72%, rgba(25, 32, 36, 0.7)), to(rgba(25, 32, 36, 0))), url("../../img/about-bg-desk@2x.jpg") center/cover no-repeat;
-    background: -o-linear-gradient(top, rgba(25, 32, 36, 0.7) 71.72%, rgba(25, 32, 36, 0) 100%), url("../../img/about-bg-desk@2x.jpg") center/cover no-repeat;
-    background: linear-gradient(180deg, rgba(25, 32, 36, 0.7) 71.72%, rgba(25, 32, 36, 0) 100%), url("../../img/about-bg-desk@2x.jpg") center/cover no-repeat;
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(71.72%, rgba(25, 32, 36, 0.7)), to(rgba(25, 32, 36, 0))), url("../img/about-bg-desk@2x.jpg") center/cover no-repeat;
+    background: -o-linear-gradient(top, rgba(25, 32, 36, 0.7) 71.72%, rgba(25, 32, 36, 0) 100%), url("../img/about-bg-desk@2x.jpg") center/cover no-repeat;
+    background: linear-gradient(180deg, rgba(25, 32, 36, 0.7) 71.72%, rgba(25, 32, 36, 0) 100%), url("../img/about-bg-desk@2x.jpg") center/cover no-repeat;
   }
 }

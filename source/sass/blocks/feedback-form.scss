@@ -118,6 +118,10 @@
   flex-grow: 1;
   margin-right: 50px;
 
+  @include vp-1023 {
+    margin-right: 80px;
+  }
+
   @include vp-767 {
     flex-basis: 100%;
     margin: 0;
@@ -133,13 +137,13 @@
 
   &::before {
     left: 5px;
-    top: 17px;
+    top: 13px;
   }
 }
 
 .feedback-form__checkbox-container:has([type="checkbox"]:checked) {
   &::after {
     left: 8px;
-    top: 22px;
+    top: 18px;
   }
 }

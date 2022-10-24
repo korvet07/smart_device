@@ -4,33 +4,33 @@
   min-height: 755px;
   margin-bottom: 120px;
   background: linear-gradient(180deg, rgba(25, 32, 36, 0.7) 71.72%, rgba(25, 32, 36, 0) 100%),
-    url("../../img/about-bg-desk.jpg") center/cover no-repeat;
+    url("../img/about-bg-desk.jpg") center/cover no-repeat;
   background-size: 100vw 880px;
   background-position-y: -5%;
 
   @include retina {
     background: linear-gradient(180deg, rgba(25, 32, 36, 0.7) 71.72%, rgba(25, 32, 36, 0) 100%),
-      url("../../img/about-bg-desk@2x.jpg") center/cover no-repeat;
+      url("../img/about-bg-desk@2x.jpg") center/cover no-repeat;
   }
 
   @include vp-1023 {
     background: linear-gradient(180deg, rgba(25, 32, 36, 0.7) 71.72%, rgba(25, 32, 36, 0) 100%),
-      url("../../img/about-bg-tab.jpg") center/cover no-repeat;
+      url("../img/about-bg-tab.jpg") center/cover no-repeat;
 
     @include retina {
       background: linear-gradient(180deg, rgba(25, 32, 36, 0.7) 71.72%, rgba(25, 32, 36, 0) 100%),
-        url("../../img/about-bg-tab@2x.jpg") center/cover no-repeat;
+        url("../img/about-bg-tab@2x.jpg") center/cover no-repeat;
     }
   }
 
 
   @include vp-767 {
     background: linear-gradient(180deg, rgba(25, 32, 36, 0.7) 71.72%, rgba(25, 32, 36, 0) 100%),
-      url("../../img/about-bg-mob.jpg") center/cover no-repeat;
+      url("../img/about-bg-mob.jpg") center/cover no-repeat;
 
     @include retina {
       background: linear-gradient(180deg, rgba(25, 32, 36, 0.7) 71.72%, rgba(25, 32, 36, 0) 100%),
-        url("../../img/about-bg-mob@2x.jpg") center/cover no-repeat;
+        url("../img/about-bg-mob@2x.jpg") center/cover no-repeat;
     }
   }
 
