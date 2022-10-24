@@ -33,12 +33,16 @@
   @include vp-1023 {
     max-width: none;
     flex-basis: 100%;
-    padding-right: 50px;
   }
 }
 
 .page-footer__list:first-child {
   margin-right: 30px;
+
+  @include vp-1023 {
+    margin: 0;
+    padding: 0;
+  }
 }
 
 .page-footer__link-wrapper {
@@ -86,6 +90,6 @@
   margin-bottom: 10px;
 }
 
-.page-footer__list li {
-  margin-bottom: 15px;
+.page-footer__link-wrapper > .page-footer__list .page-footer__item {
+  margin-bottom: 7px;
 }
