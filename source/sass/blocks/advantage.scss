@@ -12,9 +12,11 @@
   }
 
   @include vp-767 {
+    grid-template-rows: none;
     grid-template-columns: 1fr;
-    grid-template-rows: minmax(340px, auto);
-    grid-column: 0;
+    grid-auto-rows: minmax(340px, auto);
+    grid-column-gap: 0;
+    margin-bottom: 18px;
   }
 }
 
@@ -79,6 +81,7 @@
   @include vp-767 {
     font-size: 20px;
     line-height: 140%;
+    margin-top: 5px;
   }
 }
 
@@ -88,5 +91,11 @@
 
   @include vp-1023 {
     margin-top: 8px;
+  }
+
+  @include vp-767 {
+    font-size: 14px;
+    line-height: 135%;
+    color: #041827;
   }
 }
