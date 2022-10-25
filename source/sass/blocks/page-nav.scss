@@ -19,6 +19,7 @@
   @include list-default;
   flex-grow: 1;
   display: flex;
+  flex-wrap: wrap;
   align-items: center;
   min-height: 120px;
 
