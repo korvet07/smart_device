@@ -120,7 +120,7 @@
           </picture>
         </div>
         <div id="about_content" class="about__content">
-          <h2>О компаниии</h2>
+          <h2>О компании</h2>
           <p>Мы&nbsp;поставляем электронные комплектующие, производим печатные платы и&nbsp;предоставляем мировые
             технологии с&nbsp;1997&nbsp;года. Выполняем срочные заказы и&nbsp;пилотные образцы до&nbsp;10&nbsp;дней.
           </p>
@@ -307,7 +307,8 @@
               <input id="name_user" type="text" name="user-name" placeholder="Имя" required tabindex="1">
             </label>
             <label>
-              <input type="tel" name="user-tel" id="user-tel" placeholder="Телефон" required tabindex="2">
+              <input type="tel" name="user-tel" id="user-tel" placeholder="Телефон" required tabindex="2"
+                pattern="^((8|\+7)[\- ]?)?(\(?\d{3}\)?[\- ]?)?[\d\- ]{9,10}$">
             </label>
             <textarea name="user-question" id="user-question" placeholder="Ваш вопрос" tabindex="3"></textarea>
             <button class="btn modal__submit-btn btn--black" type="submit" tabindex="5"
