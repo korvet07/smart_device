@@ -4,6 +4,10 @@
   @include vp-1023 {
     margin-bottom: 78px;
   }
+
+  @include vp-767 {
+    margin-bottom: 84px;
+  }
 }
 
 .about__wrapper {

@@ -70,7 +70,3 @@
 .ac.is-active .ac-panel {
   visibility: visible;
 }
-
-.ac.is-active > .ac-header .ac-trigger::after {
-  content: "–";
-}

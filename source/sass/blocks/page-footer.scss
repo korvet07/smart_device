@@ -69,6 +69,10 @@
     flex-basis: 100%;
     flex-grow: 1;
   }
+
+  @include vp-767 {
+    margin-bottom: -15px;
+  }
 }
 
 .page-footer__logo {
