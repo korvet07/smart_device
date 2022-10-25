@@ -992,7 +992,7 @@ button,
 
 .page-footer .page-footer__title {
   margin-left: -9px;
-  margin-bottom: 10px;
+  margin-bottom: 5px;
 }
 
 .page-footer__link-wrapper > .page-footer__list .page-footer__item {
@@ -1121,7 +1121,7 @@ button,
   width: 15px;
   height: 15px;
   background: url("../img/svg/minus.svg") center/cover no-repeat;
-  top: 65%;
+  top: 50%;
 }
 
 .page-footer-accordion__wrapper .js-enabled {
@@ -1148,6 +1148,10 @@ button,
   background-color: rgba(248, 253, 255, 0.7);
 }
 
+.page-footer-accordion__two.js-enabled.is-active {
+  min-height: 210px;
+}
+
 .our-office__list {
   margin: 0;
   padding: 0;
@@ -1161,7 +1165,16 @@ button,
 }
 
 .our-office > .our-office__list .our-office__item {
-  margin-bottom: 10px;
+  margin-bottom: 5px;
+}
+
+.our-office > .our-office__list .our-office__item:first-child {
+  margin-bottom: 15px;
+  line-height: 135%;
+}
+
+.our-office > .our-office__list .our-office__item:not(:first-child) {
+  padding: 0;
 }
 
 .our-office .our-office__item:has(.our-office__tel) {
@@ -2410,6 +2423,12 @@ button,
     padding: 10px;
     min-height: 60px;
     margin: 0;
+    margin-bottom: -5px;
+  }
+
+  .our-office__list {
+    font-size: 14px;
+    line-height: 25px;
   }
 
   .main-screen {

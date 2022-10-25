@@ -82,6 +82,7 @@
     padding: 10px;
     min-height: 60px;
     margin: 0;
+    margin-bottom: -5px;
   }
 }
 // переопределение стилей библиотеки accordion-jsn
@@ -106,7 +107,7 @@
     width: 15px;
     height: 15px;
     background: url("../img/svg/minus.svg") center/cover no-repeat;
-    top: 65%;
+    top: 50%;
   }
 }
 
@@ -132,4 +133,8 @@
     height: 2px;
     background-color: rgba(248, 253, 255, 0.7);
   }
+}
+
+.page-footer-accordion__two.js-enabled.is-active {
+  min-height: 210px;
 }
