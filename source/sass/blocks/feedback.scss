@@ -1,7 +1,8 @@
 .feedback {
   position: relative;
-  background: linear-gradient(139deg, #026592 33%, $color-page-blue 33%);
-  min-height: 838px;
+  background: linear-gradient(139deg, #026592 34%, $color-page-blue 33%);
+  min-height: 843px;
+  padding-bottom: 20px;
 
   @include vp-1023 {
     background: $color-page-blue;
@@ -17,7 +18,7 @@
   margin-top: 250px;
   width: 510px;
   height: 285px;
-  margin-right: 115px;
+  margin-right: 120px;
 
   @media (max-width: $vp-1280) {
     width: auto;

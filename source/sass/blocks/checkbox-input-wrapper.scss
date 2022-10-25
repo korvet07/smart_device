@@ -17,6 +17,10 @@
   }
 }
 
+.checkbox-input-wrapper label {
+  cursor: pointer;
+}
+
 .checkbox-input-wrapper:has([type="checkbox"]:checked) {
   &::after {
     position: absolute;

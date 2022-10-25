@@ -1,5 +1,5 @@
 .feedback-form {
-  width: 585px;
+  width: 580px;
   min-height: 420px;
   color: $color-default-white;
   margin-top: 170px;
@@ -21,6 +21,7 @@
   font-size: 36px;
   line-height: 51px;
   margin: 0;
+  margin-left: -5px;
 
   @include vp-1023 {
     margin-bottom: -10px;
@@ -35,6 +36,7 @@
 .feedback-form p {
   line-height: 22px;
   margin-bottom: 35px;
+  margin-top: 10px;
 
   @include vp-1023 {
     margin-bottom: 27px;
@@ -83,7 +85,7 @@
   background: rgba(4, 20, 39, 0.15);
   width: 100%;
   min-height: 155px;
-  margin: 20px 0 27px;
+  margin: 20px 0 33px;
   border: none;
   padding: 25px 15px;
 
@@ -126,7 +128,7 @@
   min-height: 45px;
   padding: 5px;
   flex-grow: 1;
-  margin-right: 50px;
+  margin-right: 45px;
 
   @include vp-1023 {
     margin-right: 80px;
@@ -144,6 +146,7 @@
   flex-grow: 1;
   padding: 5px 5px 5px 20px;
   align-items: end;
+  margin-bottom: -5px;
 
   &::before {
     left: 5px;

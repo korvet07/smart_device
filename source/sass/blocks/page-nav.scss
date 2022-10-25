@@ -101,6 +101,10 @@
 .page-nav__item:nth-child(2n) {
   margin-bottom: 20px;
 
+  @include vp-1279 {
+    margin-right: 10px;
+  }
+
   @include vp-767 {
     margin-bottom: 5px;
   }

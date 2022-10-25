@@ -4,8 +4,7 @@
   margin-bottom: 120px;
   background: linear-gradient(180deg, rgba(25, 32, 36, 0.7) 71.72%, rgba(25, 32, 36, 0) 100%),
     url("../img/about-bg-desk.jpg") center/cover no-repeat;
-  background-size: 100vw 880px;
-  background-position-y: -5%;
+  background-size: 100vw 100%;
 
   @include retina {
     background: linear-gradient(180deg, rgba(25, 32, 36, 0.7) 71.72%, rgba(25, 32, 36, 0) 100%),

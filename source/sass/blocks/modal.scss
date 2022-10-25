@@ -71,11 +71,11 @@
 
   &__close-btn {
     position: absolute;
-    top: 22px;
-    right: 22px;
+    top: 15px;
+    right: 15px;
     z-index: 1;
-    width: 40px;
-    height: 40px;
+    width: 45px;
+    height: 45px;
     padding: 0;
     background: $color-transparent;
     border: none;
@@ -115,6 +115,14 @@
 
   &--no-scale {
     transform: none;
+
+    .modal__content {
+      position: relative;
+      left: -8px;
+      top: -15px;
+      padding-top: 35px;
+      margin-bottom: -10px;
+    }
   }
 
   &--preload {
@@ -188,7 +196,6 @@
   font-size: 30px;
   line-height: 140.62%;
   margin: 0;
-  margin-bottom: 15px;
 }
 
 .modal p {
@@ -200,11 +207,20 @@
 }
 
 .modal__submit-btn {
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 19px;
+  text-align: center;
+  letter-spacing: 0.05em;
   margin-bottom: 20px;
 }
 
 
 .modal__checkbox-input-wrapper {
+  position: absolute;
+  bottom: 35px;
+  left: 47px;
+
   &::before {
     top: 13px;
   }
@@ -214,4 +230,8 @@
   &::after {
     top: 17px;
   }
+}
+
+.modal__form input[type="checkbox"] + label {
+  cursor: pointer;
 }

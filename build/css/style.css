@@ -822,6 +822,10 @@ button,
   border-radius: 3px;
 }
 
+.checkbox-input-wrapper label {
+  cursor: pointer;
+}
+
 .checkbox-input-wrapper:has([type="checkbox"]:checked)::after {
   position: absolute;
   content: "";
@@ -966,7 +970,7 @@ button,
 }
 
 .page-footer__list:first-child {
-  margin-right: 30px;
+  margin-right: 45px;
 }
 
 .page-footer__link-wrapper {
@@ -993,8 +997,8 @@ button,
 }
 
 .page-footer .page-footer__title {
-  margin-left: -9px;
-  margin-bottom: 5px;
+  margin-top: -5px;
+  margin-bottom: 10px;
 }
 
 .page-footer__link-wrapper > .page-footer__list .page-footer__item {
@@ -1154,6 +1158,10 @@ button,
   min-height: 210px;
 }
 
+.page-footer-accordion .page-footer-accordion__two > h2 {
+  margin-left: -12px;
+}
+
 .our-office__list {
   margin: 0;
   padding: 0;
@@ -1194,8 +1202,7 @@ button,
   background: -webkit-gradient(linear, left top, left bottom, color-stop(71.72%, rgba(25, 32, 36, 0.7)), to(rgba(25, 32, 36, 0))), url("../img/about-bg-desk.jpg") center/cover no-repeat;
   background: -o-linear-gradient(top, rgba(25, 32, 36, 0.7) 71.72%, rgba(25, 32, 36, 0) 100%), url("../img/about-bg-desk.jpg") center/cover no-repeat;
   background: linear-gradient(180deg, rgba(25, 32, 36, 0.7) 71.72%, rgba(25, 32, 36, 0) 100%), url("../img/about-bg-desk.jpg") center/cover no-repeat;
-  background-size: 100vw 880px;
-  background-position-y: -5%;
+  background-size: 100vw 100%;
 }
 
 .main-screen__wrapper {
@@ -1319,6 +1326,7 @@ button,
 
 .about__content p:nth-child(3n) {
   margin-bottom: 0;
+  margin-top: 20px;
 }
 
 .about__content p:last-of-type {
@@ -1456,7 +1464,7 @@ button,
 
 .card-list a {
   position: relative;
-  padding: 38px 45px 70px;
+  padding: 56px 43px 70px;
   color: #ffffff;
 }
 
@@ -1501,9 +1509,10 @@ button,
 
 .feedback {
   position: relative;
-  background: -o-linear-gradient(311deg, #026592 33%, #00b2ff 33%);
-  background: linear-gradient(139deg, #026592 33%, #00b2ff 33%);
-  min-height: 838px;
+  background: -o-linear-gradient(311deg, #026592 34%, #00b2ff 33%);
+  background: linear-gradient(139deg, #026592 34%, #00b2ff 33%);
+  min-height: 843px;
+  padding-bottom: 20px;
 }
 
 .feedback__wrapper {
@@ -1516,11 +1525,11 @@ button,
   margin-top: 250px;
   width: 510px;
   height: 285px;
-  margin-right: 115px;
+  margin-right: 120px;
 }
 
 .feedback-form {
-  width: 585px;
+  width: 580px;
   min-height: 420px;
   color: #ffffff;
   margin-top: 170px;
@@ -1533,11 +1542,13 @@ button,
   font-size: 36px;
   line-height: 51px;
   margin: 0;
+  margin-left: -5px;
 }
 
 .feedback-form p {
   line-height: 22px;
   margin-bottom: 35px;
+  margin-top: 10px;
 }
 
 .feedback-form__wrapper {
@@ -1619,7 +1630,7 @@ button,
   background: rgba(4, 20, 39, 0.15);
   width: 100%;
   min-height: 155px;
-  margin: 20px 0 27px;
+  margin: 20px 0 33px;
   border: none;
   padding: 25px 15px;
 }
@@ -1688,7 +1699,7 @@ button,
   -webkit-box-flex: 1;
   -ms-flex-positive: 1;
   flex-grow: 1;
-  margin-right: 50px;
+  margin-right: 45px;
 }
 
 .feedback-form__checkbox-container {
@@ -1699,6 +1710,7 @@ button,
   -webkit-box-align: end;
   -ms-flex-align: end;
   align-items: end;
+  margin-bottom: -5px;
 }
 
 .feedback-form__checkbox-container::before {
@@ -1790,11 +1802,11 @@ button,
 
 .modal__close-btn {
   position: absolute;
-  top: 22px;
-  right: 22px;
+  top: 15px;
+  right: 15px;
   z-index: 1;
-  width: 40px;
-  height: 40px;
+  width: 45px;
+  height: 45px;
   padding: 0;
   background: rgba(255, 255, 255, 0);
   border: none;
@@ -1819,6 +1831,14 @@ button,
   -webkit-transform: none;
   -ms-transform: none;
   transform: none;
+}
+
+.modal--no-scale .modal__content {
+  position: relative;
+  left: -8px;
+  top: -15px;
+  padding-top: 35px;
+  margin-bottom: -10px;
 }
 
 .modal--preload {
@@ -1951,7 +1971,6 @@ button,
   font-size: 30px;
   line-height: 140.62%;
   margin: 0;
-  margin-bottom: 15px;
 }
 
 .modal p {
@@ -1963,7 +1982,18 @@ button,
 }
 
 .modal__submit-btn {
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 19px;
+  text-align: center;
+  letter-spacing: 0.05em;
   margin-bottom: 20px;
+}
+
+.modal__checkbox-input-wrapper {
+  position: absolute;
+  bottom: 35px;
+  left: 47px;
 }
 
 .modal__checkbox-input-wrapper::before {
@@ -1972,6 +2002,10 @@ button,
 
 .modal__checkbox-input-wrapper:has([type="checkbox"]:checked)::after {
   top: 17px;
+}
+
+.modal__form input[type="checkbox"] + label {
+  cursor: pointer;
 }
 
 /* @media (hover: hover), screen and (min-width: 0\0) {
@@ -2061,6 +2095,11 @@ button,
 
   .page-nav__item:first-child {
     margin-right: auto;
+  }
+
+  .page-nav__item:nth-child(3n),
+  .page-nav__item:nth-child(2n) {
+    margin-right: 10px;
   }
 
   .page-footer__social {
