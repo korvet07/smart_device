@@ -1158,10 +1158,6 @@ button,
   min-height: 210px;
 }
 
-.page-footer-accordion .page-footer-accordion__two > h2 {
-  margin-left: -12px;
-}
-
 .our-office__list {
   margin: 0;
   padding: 0;
@@ -1838,6 +1834,7 @@ button,
   left: -8px;
   top: -15px;
   padding-top: 35px;
+  padding-bottom: 60px;
   margin-bottom: -10px;
 }
 
