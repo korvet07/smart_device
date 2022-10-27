@@ -1337,16 +1337,19 @@ button,
   margin-top: 20px;
 }
 
-.about__content p:last-of-type {
+.about__content p:last-of-type,
+.about__content p:nth-of-type(4n) {
   font-size: 0;
   opacity: 0;
   -webkit-transition: 0.3s ease;
   -o-transition: 0.3s ease;
   transition: 0.3s ease;
-  height: 15px;
+  height: 0;
+  margin-top: 15px;
 }
 
-.about__content--active p:last-of-type {
+.about__content--active p:last-of-type,
+.about__content--active p:nth-of-type(4n) {
   height: auto;
   opacity: 1;
   font-size: 16px;
@@ -1726,7 +1729,7 @@ button,
 
 .modal {
   position: fixed;
-  top: -150px;
+  top: 0;
   right: 0;
   bottom: 0;
   left: 0;
@@ -1836,11 +1839,10 @@ button,
 
 .modal--no-scale .modal__content {
   position: relative;
-  left: -8px;
-  top: -15px;
-  padding-top: 35px;
-  padding-bottom: 60px;
-  margin-bottom: -10px;
+  margin-top: 55px;
+  margin-right: 10px;
+  width: 500px;
+  padding: 43px 40px 44px;
 }
 
 .modal--preload {
@@ -2295,10 +2297,11 @@ button,
   }
 
   .about__content p:last-of-type {
-    height: 7px;
+    margin-top: 5px;
   }
 
-  .about__content--active p:last-of-type {
+  .about__content--active p:last-of-type,
+  .about__content--active p:nth-of-type(4n) {
     height: auto;
   }
 
@@ -2576,10 +2579,11 @@ button,
 
   .about__content p:last-of-type {
     margin-top: 0;
-    height: 17px;
+    height: 0;
   }
 
-  .about__content--active p:last-of-type {
+  .about__content--active p:last-of-type,
+  .about__content--active p:nth-of-type(4n) {
     height: auto;
   }
 
