@@ -513,6 +513,7 @@ html {
   font-family: "Pt Mono", "Monaco", monospace;
   color: #000000;
   scroll-behavior: smooth;
+  overflow-x: hidden;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-rendering: optimizeLegibility;
@@ -534,6 +535,10 @@ body {
 a {
   color: #000000;
   text-decoration: none;
+}
+
+html:has(body.scroll-lock) {
+  overflow-x: visible;
 }
 
 img,
@@ -801,20 +806,24 @@ button,
   border: 3px solid #000000;
 }
 
-.checkbox-input-wrapper {
+.checkbox-input-wrapper label {
   position: relative;
-  padding: 10px 10px 10px 20px;
-  -ms-flex-item-align: end;
-  -ms-grid-row-align: end;
-  align-self: end;
+  display: block;
+  padding-left: 25px;
+  font-family: "Pt Mono", "Monaco", monospace;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 16px;
+  color: rgba(255, 255, 255, 0.8);
   cursor: pointer;
 }
 
-.checkbox-input-wrapper::before {
+.checkbox-input-wrapper label::before {
   content: "";
   position: absolute;
   left: 0;
-  top: 17px;
+  top: 5px;
   width: 15px;
   height: 15px;
   background: #00b3ff;
@@ -822,22 +831,18 @@ button,
   border-radius: 3px;
 }
 
-.checkbox-input-wrapper label {
-  cursor: pointer;
-}
-
-.checkbox-input-wrapper:has([type="checkbox"]:checked)::after {
+.checkbox-input-wrapper > input[type="checkbox"]:checked + label::after {
   position: absolute;
   content: "";
   width: 9px;
   height: 6px;
-  left: 3px;
-  top: 22px;
+  left: 0;
+  top: 0;
   background: url("../img/svg/check.svg") center no-repeat;
 }
 
-.checkbox-input-wrapper:has([type="checkbox"]:focus),
-.checkbox-input-wrapper:has([type="checkbox"]:active) {
+.checkbox-input-wrapper > input[type="checkbox"] + label:focus,
+.checkbox-input-wrapper > input[type="checkbox"] + label:active {
   outline: 2px solid #000000;
   border-radius: 3px;
 }
@@ -857,7 +862,7 @@ button,
   right: 0;
   z-index: 2;
   padding-bottom: 20px;
-  margin-bottom: -20px;
+  margin-bottom: -15px;
 }
 
 .page-nav__list {
@@ -882,9 +887,9 @@ button,
   padding: 5px;
   color: #f2f5f7;
   line-height: 18px;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
   -webkit-box-pack: center;
   -ms-flex-pack: center;
   justify-content: center;
@@ -893,33 +898,9 @@ button,
   align-items: center;
 }
 
-.page-nav__item:last-child {
-  min-width: 160px;
-  margin-right: 5%;
-}
-
-.page-nav__item:first-child {
-  -ms-flex-negative: 0;
-  flex-shrink: 0;
-  margin-right: 8.2vw;
-}
-
 .page-nav__link svg {
   fill: #00b2ff;
   margin-right: 15px;
-}
-
-.page-nav__item:nth-child(3n) {
-  margin-right: 8.5vw;
-}
-
-.page-nav__item:nth-child(2n) {
-  margin-right: 1.5vw;
-}
-
-.page-nav__item:nth-child(3n),
-.page-nav__item:nth-child(2n) {
-  margin-bottom: 20px;
 }
 
 .page-nav__link:hover svg {
@@ -942,8 +923,26 @@ button,
   border-radius: 4px;
 }
 
-.page-nav__link span {
-  min-width: 173px;
+.page-nav__container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.page-nav__button {
+  min-width: 160px;
+  margin-right: 5%;
+}
+
+.page-nav__item:first-child {
+  margin-left: 8.1vw;
+}
+
+.page-nav__item:nth-child(2n) {
+  margin-left: 5.6vw;
 }
 
 .page-footer {
@@ -953,7 +952,11 @@ button,
 }
 
 .page-footer__link {
-  padding-left: 0;
+  padding: 0;
+}
+
+.page-footer__link:not(:last-child) {
+  margin-bottom: 10px;
 }
 
 .page-footer__wrapper {
@@ -970,7 +973,7 @@ button,
 }
 
 .page-footer__list:first-child {
-  margin-right: 45px;
+  margin-right: 40px;
 }
 
 .page-footer__link-wrapper {
@@ -1003,6 +1006,8 @@ button,
 
 .page-footer__link-wrapper > .page-footer__list .page-footer__item {
   margin-bottom: 7px;
+  padding: 0;
+  padding-left: 10px;
 }
 
 .footer-social__list {
@@ -1071,7 +1076,7 @@ button,
 
 .page-footer-accordion__one a,
 .page-footer-accordion__two a {
-  padding: 10px;
+  padding: 0;
   font-family: "Pt Mono", "Monaco", monospace;
   font-style: normal;
   font-weight: 400;
@@ -1158,6 +1163,10 @@ button,
   min-height: 210px;
 }
 
+.page-footer-accordion__two .page-footer-accordion__btn {
+  padding-left: 0;
+}
+
 .our-office__list {
   margin: 0;
   padding: 0;
@@ -1203,6 +1212,7 @@ button,
 
 .main-screen__wrapper {
   padding-left: 6.5vw;
+  padding-bottom: 30px;
 }
 
 .main-screen h1 {
@@ -1328,7 +1338,6 @@ button,
 .about__content p:last-of-type {
   font-size: 0;
   opacity: 0;
-  height: 15px;
   -webkit-transition: 0.3s ease;
   -o-transition: 0.3s ease;
   transition: 0.3s ease;
@@ -1692,31 +1701,24 @@ button,
   min-width: 265px;
   min-height: 45px;
   padding: 5px;
-  -webkit-box-flex: 1;
-  -ms-flex-positive: 1;
-  flex-grow: 1;
-  margin-right: 45px;
+  margin-right: 50px;
 }
 
 .feedback-form__checkbox-container {
   -webkit-box-flex: 1;
   -ms-flex-positive: 1;
   flex-grow: 1;
-  padding: 5px 5px 5px 20px;
-  -webkit-box-align: end;
-  -ms-flex-align: end;
-  align-items: end;
-  margin-bottom: -5px;
+  margin-top: auto;
 }
 
-.feedback-form__checkbox-container::before {
-  left: 5px;
-  top: 13px;
+.feedback-form__checkbox-container label::before {
+  left: 0;
+  top: 8px;
 }
 
-.feedback-form__checkbox-container:has([type="checkbox"]:checked)::after {
-  left: 8px;
-  top: 18px;
+.feedback-form__checkbox-container > input[type="checkbox"]:checked + label::after {
+  left: 3px;
+  top: 12px;
 }
 
 .modal {
@@ -1923,16 +1925,6 @@ button,
   flex-basis: 100%;
 }
 
-.checkbox-input-wrapper label {
-  padding-left: 10px;
-  font-family: "Pt Mono", "Monaco", monospace;
-  font-style: normal;
-  font-weight: 400;
-  font-size: 14px;
-  line-height: 16px;
-  color: rgba(255, 255, 255, 0.8);
-}
-
 .modal__form textarea {
   min-height: 155px;
   padding: 25px 15px;
@@ -1987,22 +1979,31 @@ button,
   margin-bottom: 20px;
 }
 
-.modal__checkbox-input-wrapper {
+.modal__checkbox-input-wrapper label {
   position: absolute;
   bottom: 35px;
   left: 47px;
 }
 
-.modal__checkbox-input-wrapper::before {
-  top: 13px;
+.modal__checkbox-input-wrapper label::before {
+  top: 0;
+  left: 0;
 }
 
-.modal__checkbox-input-wrapper:has([type="checkbox"]:checked)::after {
-  top: 17px;
+.modal__checkbox-input-wrapper > input[type="checkbox"]:checked + label::after {
+  top: 3px;
+  left: 3px;
 }
 
 .modal__form input[type="checkbox"] + label {
   cursor: pointer;
+}
+
+.logo-header {
+  width: 215px;
+  height: 55px;
+  -ms-flex-negative: 0;
+  flex-shrink: 0;
 }
 
 /* @media (hover: hover), screen and (min-width: 0\0) {
@@ -2034,6 +2035,10 @@ button,
 }
 
 @media (min-width: 1024px) {
+  .page-footer .page-footer__title {
+    pointer-events: none;
+  }
+
   .card-list a:nth-child(2n) {
     background: url("../img/product-card/bg-card-desk-2.jpg") center/cover no-repeat;
   }
@@ -2061,20 +2066,6 @@ button,
   }
 }
 
-@media (min-width: 1921px) {
-  .page-nav__item:first-child {
-    margin-right: 160px;
-  }
-
-  .page-nav__item:nth-child(3n) {
-    margin-right: 30px;
-  }
-
-  .page-nav__item:nth-child(2n) {
-    margin-right: 30px;
-  }
-}
-
 @media (max-width: 1280px) {
   .feedback__img-wrapper {
     width: auto;
@@ -2088,15 +2079,6 @@ button,
 @media (max-width: 1279px) {
   .container {
     padding: 0 30px;
-  }
-
-  .page-nav__item:first-child {
-    margin-right: auto;
-  }
-
-  .page-nav__item:nth-child(3n),
-  .page-nav__item:nth-child(2n) {
-    margin-right: 10px;
   }
 
   .page-footer__social {
@@ -2133,18 +2115,6 @@ button,
     padding: 10px;
   }
 
-  .page-nav__item:last-child {
-    display: none;
-  }
-
-  .page-nav__item:nth-child(3n) {
-    margin-right: 10px;
-  }
-
-  .page-nav__item:nth-child(2n) {
-    margin-right: 20px;
-  }
-
   .page-nav__list {
     -webkit-box-pack: start;
     -ms-flex-pack: start;
@@ -2159,6 +2129,21 @@ button,
 
   .page-nav__link svg {
     margin: 0;
+  }
+
+  .page-nav__button {
+    display: none;
+  }
+
+  .page-nav__item:first-child {
+    margin-left: auto;
+    margin-bottom: 15px;
+  }
+
+  .page-nav__item:nth-child(2n) {
+    margin-left: 20px;
+    margin-right: 10px;
+    margin-bottom: 14px;
   }
 
   .page-footer {
@@ -2179,6 +2164,7 @@ button,
 
   .page-footer__list:first-child {
     margin: 0;
+    margin-bottom: -5px;
     padding: 0;
   }
 
@@ -2199,6 +2185,18 @@ button,
     -webkit-box-flex: 1;
     -ms-flex-positive: 1;
     flex-grow: 1;
+  }
+
+  .page-footer .page-footer__title {
+    margin-left: -10px;
+  }
+
+  .page-footer .page-footer__title--two {
+    margin-left: 5px;
+  }
+
+  .page-footer__link-wrapper > .page-footer__list .page-footer__item {
+    padding: 0;
   }
 
   .footer-social__list {
@@ -2224,6 +2222,10 @@ button,
     -webkit-box-flex: 1;
     -ms-flex-positive: 1;
     flex-grow: 1;
+  }
+
+  .our-office__list {
+    margin-left: 7px;
   }
 
   .main-screen {
@@ -2268,7 +2270,7 @@ button,
   }
 
   .advantage__item h2 {
-    margin-top: 10px;
+    margin-top: 5px;
   }
 
   .advantage__item p {
@@ -2276,19 +2278,23 @@ button,
   }
 
   .about {
-    margin-bottom: 78px;
+    margin-bottom: 80px;
   }
 
   .about__img {
     margin-right: 26px;
   }
 
+  .about__content p:last-of-type {
+    height: 7px;
+  }
+
   .about__content p {
-    margin-top: 10px;
+    margin-top: 5px;
   }
 
   .about__content button {
-    margin-top: -15px;
+    margin-top: -7px;
   }
 
   .product-cards {
@@ -2296,7 +2302,7 @@ button,
   }
 
   .product-cards__title {
-    padding: 50px 0 40px;
+    padding: 55px 0 40px;
   }
 
   .card-list {
@@ -2308,7 +2314,7 @@ button,
   }
 
   .card-list a {
-    padding: 40px 45px 70px;
+    padding: 35px 45px 70px;
   }
 
   .card-list > a:nth-child(2n) br:first-child {
@@ -2348,7 +2354,8 @@ button,
   }
 
   .feedback-form h2 {
-    margin-bottom: -10px;
+    margin-bottom: -8px;
+    margin-left: 2px;
   }
 
   .feedback-form p {
@@ -2361,7 +2368,13 @@ button,
   }
 
   .feedback-form__inner-container button {
-    margin-right: 80px;
+    margin-right: 85px;
+  }
+}
+
+@media (max-width: 1023px) and (max-width: 767px) {
+  .page-footer .page-footer__title--two {
+    margin-left: -10px;
   }
 }
 
@@ -2398,21 +2411,16 @@ button,
     min-height: 70px;
   }
 
-  .page-nav__item:nth-child(3n) {
-    margin-right: 0;
-  }
-
-  .page-nav__item:nth-child(3n),
-  .page-nav__item:nth-child(2n) {
-    margin-bottom: 5px;
-  }
-
   .page-nav__list {
     min-height: 70px;
   }
 
+  .page-nav__item:nth-child(2n) {
+    margin-right: 0;
+  }
+
   .page-footer {
-    min-height: 475px;
+    min-height: 0;
     padding-top: 35px;
   }
 
@@ -2461,9 +2469,14 @@ button,
     margin-bottom: -5px;
   }
 
+  .page-footer-accordion__two .page-footer-accordion__btn {
+    padding-bottom: 0;
+  }
+
   .our-office__list {
     font-size: 14px;
     line-height: 25px;
+    margin-left: 0;
   }
 
   .main-screen {
@@ -2485,7 +2498,7 @@ button,
 
   .main-screen p {
     font-size: 14px;
-    margin-bottom: 47px;
+    margin-bottom: 42px;
     margin-top: 10px;
   }
 
@@ -2513,7 +2526,7 @@ button,
   }
 
   .advantage__item:last-child {
-    margin-top: -5px;
+    margin-top: -10px;
   }
 
   .advantage__item h2 {
@@ -2546,11 +2559,13 @@ button,
 
   .about__content p:last-of-type {
     margin-top: 0;
+    height: 17px;
   }
 
   .about__content h2 {
     font-size: 28px;
     line-height: 140.62%;
+    margin-bottom: 10px;
   }
 
   .about__content p {
@@ -2615,6 +2630,13 @@ button,
     line-height: 140.62%;
   }
 
+  .feedback-form p {
+    font-size: 14px;
+    line-height: 134.4%;
+    margin-top: 13px;
+    margin-bottom: 35px;
+  }
+
   .feedback-form__wrapper {
     -ms-grid-columns: 1fr;
     grid-template-columns: 1fr;
@@ -2626,8 +2648,9 @@ button,
   }
 
   .feedback-form textarea {
-    padding-top: 27px;
+    padding-top: 22px;
     min-height: 180px;
+    margin-bottom: 25px;
   }
 
   .feedback-form__inner-container {
@@ -2640,11 +2663,12 @@ button,
     flex-basis: 100%;
     margin: 0;
     min-width: 0;
-    margin-bottom: 17px;
+    margin-bottom: 26px;
   }
 
   .feedback-form__checkbox-container {
-    margin-bottom: 80px;
+    margin-bottom: 70px;
+    margin-left: 5px;
   }
 
   .modal__wrapper {
@@ -2658,6 +2682,11 @@ button,
 
   .modal--fit-content .modal__content {
     width: 100%;
+  }
+
+  .logo-header {
+    width: 35px;
+    height: 35px;
   }
 }
 
@@ -2682,6 +2711,10 @@ button,
 }
 
 @media (hover: hover) {
+  .checkbox-input-wrapper > input[type="checkbox"] + label:hover {
+    color: #000000;
+  }
+
   .footer-social__link:hover svg {
     fill: #00b2ff;
   }

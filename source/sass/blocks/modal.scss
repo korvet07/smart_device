@@ -168,16 +168,6 @@
   flex-basis: 100%;
 }
 
-.checkbox-input-wrapper label {
-  padding-left: 10px;
-  font-family: $ff-mono;
-  font-style: normal;
-  font-weight: 400;
-  font-size: 14px;
-  line-height: 16px;
-  color: rgba(255, 255, 255, 0.8);
-}
-
 .modal__form textarea {
   min-height: 155px;
   padding: 25px 15px;
@@ -217,19 +207,21 @@
 }
 
 
-.modal__checkbox-input-wrapper {
+.modal__checkbox-input-wrapper label {
   position: absolute;
   bottom: 35px;
   left: 47px;
 
   &::before {
-    top: 13px;
+    top: 0;
+    left: 0;
   }
 }
 
-.modal__checkbox-input-wrapper:has([type="checkbox"]:checked) {
+.modal__checkbox-input-wrapper > input[type="checkbox"]:checked + label {
   &::after {
-    top: 17px;
+    top: 3px;
+    left: 3px;
   }
 }
 

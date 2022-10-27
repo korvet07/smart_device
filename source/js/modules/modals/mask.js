@@ -7,6 +7,7 @@ window.addEventListener('DOMContentLoaded', function () {
       }
       let pos = evt.currentTarget.selectionStart;
       if (pos < 3) {
+        evt.currentTarget.style.pointerEvents = 'none';
         evt.preventDefault();
       }
       let matrix = '+7 (___) ___ ____';

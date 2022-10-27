@@ -20,15 +20,13 @@
   <header class="page-header">
     <nav class="page-header__nav page-nav">
       <div class="container page-nav__container">
+        <a class="logo-header">
+          <picture>
+            <source media="(max-width: 768px)" srcset="img/svg/logo-mobile.svg">
+            <img src="img/svg/logo-desktop.svg" alt="Логотип компании." width="215" height="55">
+          </picture>
+        </a>
         <ul class="page-nav__list">
-          <li class="page-nav__item">
-            <a class="logo-header">
-              <picture>
-                <source media="(max-width: 768px)" srcset="img/svg/logo-mobile.svg">
-                <img src="img/svg/logo-desktop.svg" alt="Логотип компании." width="215" height="55">
-              </picture>
-            </a>
-          </li>
           <li class="page-nav__item">
             <a href="mailto:info@sd.ru" class="page-nav__link" aria-label="Емайл.">
               <svg width="21" height="20" viewBox="0 0 21 20" fill="none" xmlns="http://www.w3.org/2000/svg" role="img"
@@ -47,10 +45,8 @@
               <span>+7 (495) 000 52 52</span>
             </a>
           </li>
-          <li class="page-nav__item">
-            <a class="btn" href="#" data-open-modal="feedback" aria-haspopup="true">Заказать&nbsp;звонок</a>
-          </li>
         </ul>
+        <a class="btn page-nav__button" href="#" data-open-modal="feedback" aria-haspopup="true">Заказать&nbsp;звонок</a>
       </div>
     </nav>
 
@@ -174,20 +170,19 @@
           <p class="feedback__discription">Мы&nbsp;проконсультируем Вас&nbsp;бесплатно</p>
           <fieldset class="feedback-form__wrapper">
             <label>
-              <input type="text" name="user-name-feedback" placeholder="Имя" required tabindex="6">
+              <input type="text" name="user-name-feedback" placeholder="Имя" required>
             </label>
             <label>
               <input type="tel" name="user-phone" pattern="^((8|\+7)[\- ]?)?(\(?\d{3}\)?[\- ]?)?[\d\- ]{9,10}$"
-                placeholder="Телефон" required tabindex="7">
+                placeholder="Телефон" required>
             </label>
           </fieldset>
-          <textarea name="user-guestion" placeholder="Ваш вопрос" tabindex="8"></textarea>
+          <textarea name="user-guestion" placeholder="Ваш вопрос"></textarea>
           <div class="feedback-form__inner-container">
-            <button class="btn btn--black" type="submit" tabindex="10" aria-label="Задать вопрос.">Задать
+            <button class="btn btn--black" type="submit" aria-label="Задать вопрос.">Задать
               вопрос</button>
             <div class="checkbox-input-wrapper feedback-form__checkbox-container">
-              <input class="visually-hidden" type="checkbox" name="user-consent" id="user-consent-feedback" required
-                tabindex="9">
+              <input class="visually-hidden" type="checkbox" name="user-consent" id="user-consent-feedback" required>
               <label for="user-consent-feedback">Я&nbsp;согласен на&nbsp;обработку<br> персональных данных</label>
             </div>
           </div>
@@ -234,7 +229,8 @@
         <div class="accordion-container page-footer-accordion__wrapper">
           <div class="ac page-footer-accordion__one">
             <h2 class="ac-header page-footer__title">
-              <button type="button" class="ac-trigger page-footer-accordion__btn" aria-label="Разделы сайта.">Разделы
+              <button type="button" class="ac-trigger page-footer-accordion__btn" aria-label="Разделы сайта."
+                tabindex="-5">Разделы
                 сайта</button>
             </h2>
             <div class="ac-panel page-footer__link-wrapper">
@@ -267,8 +263,9 @@
             </div>
           </div>
           <div class="ac page-footer-accordion__two">
-            <h2 class="ac-header page-footer__title">
-              <button type="button" class="ac-trigger page-footer-accordion__btn" aria-label="Наш офис.">Наш
+            <h2 class="ac-header page-footer__title page-footer__title--two">
+              <button type="button" class="ac-trigger page-footer-accordion__btn" aria-label="Наш офис."
+                tabindex="-5">Наш
                 офис</button>
             </h2>
             <div class="ac-panel our-office">
@@ -316,11 +313,12 @@
           </form>
           <div class="checkbox-input-wrapper modal__checkbox-input-wrapper">
             <input id="user-content" class="visually-hidden" type="checkbox" form="modal-form" name="user-consent"
-              required tabindex="4">
-            <label for="user-content">Я&nbsp;согласен на&nbsp;обработку персональных данных</label>
+              required>
+            <label for="user-content" tabindex="4">Я&nbsp;согласен на&nbsp;обработку персональных данных</label>
           </div>
         </div>
-        <button class="modal__close-btn btn-reset" type="button" aria-label="Закрыть попап" data-close-modal>
+        <button class="modal__close-btn btn-reset" type="button" aria-label="Закрыть попап" data-close-modal
+          tabindex="6">
           <svg width="20" height="20">
             <use xlink:href="img/sprite_auto.svg#icon-close"></use>
           </svg>

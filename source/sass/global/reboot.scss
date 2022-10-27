@@ -19,6 +19,7 @@ html {
   font-family: $ff-mono;
   color: $color-default-black;
   scroll-behavior: smooth;
+  overflow-x: hidden;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   // оптимизация выравнивания шрифта относительно центра строки
@@ -39,6 +40,10 @@ body {
 a {
   color: $color-default-black;
   text-decoration: none;
+}
+
+html:has(body.scroll-lock) {
+  overflow-x: visible;
 }
 
 img,
