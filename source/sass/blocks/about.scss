@@ -55,6 +55,7 @@
   font-size: 0;
   opacity: 0;
   transition: $trans-default;
+  height: 15px;
 
   @include vp-1023 {
     height: 7px;

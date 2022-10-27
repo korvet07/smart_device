@@ -1341,6 +1341,7 @@ button,
   -webkit-transition: 0.3s ease;
   -o-transition: 0.3s ease;
   transition: 0.3s ease;
+  height: 15px;
 }
 
 .about__content--active p:last-of-type {
