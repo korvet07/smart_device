@@ -35,10 +35,14 @@
   }
 }
 
-.checkbox-input-wrapper > input[type="checkbox"] + label:focus,
-.checkbox-input-wrapper > input[type="checkbox"] + label:active {
+.checkbox-input-wrapper > input[type="checkbox"]:focus + label,
+.checkbox-input-wrapper > input[type="checkbox"]:active + label {
   outline: 2px solid $color-default-black;
-  border-radius: 3px;
+
+  &::before {
+    outline: 2px solid $color-default-black;
+    border-radius: 3px;
+  }
 }
 
 @media (hover: hover) {

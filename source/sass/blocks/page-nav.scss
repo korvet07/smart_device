@@ -106,6 +106,10 @@
 .page-nav__item:first-child {
   margin-left: 8.1vw;
 
+  @media (min-width: 1921px) {
+    margin-left: 155px;
+  }
+
   @include vp-1023 {
     margin-left: auto;
     margin-bottom: 15px;
@@ -114,6 +118,10 @@
 
 .page-nav__item:nth-child(2n) {
   margin-left: 5.6vw;
+
+  @media (min-width: 1921px) {
+    margin-left: 107px;
+  }
 
   @include vp-1023 {
     margin-left: 20px;

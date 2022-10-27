@@ -841,8 +841,13 @@ button,
   background: url("../img/svg/check.svg") center no-repeat;
 }
 
-.checkbox-input-wrapper > input[type="checkbox"] + label:focus,
-.checkbox-input-wrapper > input[type="checkbox"] + label:active {
+.checkbox-input-wrapper > input[type="checkbox"]:focus + label,
+.checkbox-input-wrapper > input[type="checkbox"]:active + label {
+  outline: 2px solid #000000;
+}
+
+.checkbox-input-wrapper > input[type="checkbox"]:focus + label::before,
+.checkbox-input-wrapper > input[type="checkbox"]:active + label::before {
   outline: 2px solid #000000;
   border-radius: 3px;
 }
@@ -2064,6 +2069,16 @@ button,
 
   .card-list a:first-child {
     background: url("../img/product-card/bg-card-desk-1@2x.jpg") center/cover no-repeat;
+  }
+}
+
+@media (min-width: 1921px) {
+  .page-nav__item:first-child {
+    margin-left: 155px;
+  }
+
+  .page-nav__item:nth-child(2n) {
+    margin-left: 107px;
   }
 }
 
