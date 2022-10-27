@@ -72,6 +72,14 @@
   opacity: 1;
   font-size: 16px;
   margin-bottom: 15px;
+
+  @include vp-1023 {
+    height: auto;
+  }
+
+  @include vp-767 {
+    height: auto;
+  }
 }
 
 .about__content h2 {

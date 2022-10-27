@@ -7,8 +7,4 @@
     min-height: 100px;
     margin-bottom: -20px;
   }
-
-  @include vp-767 {
-    min-height: 70px;
-  }
 }

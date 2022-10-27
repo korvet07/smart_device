@@ -1,4 +1,8 @@
 .main-page {
   display: flex;
   flex-direction: column;
+
+  @include vp-767 {
+    margin-top: -20px;
+  }
 }
