@@ -82,6 +82,10 @@
   display: flex;
   padding: 22px 61px 34px 0;
 
+  @include vp-1279 {
+    padding: 22px 61px 34px 0;
+  }
+
   @include vp-1023 {
     padding: 15px 70px 25px 50px;
   }

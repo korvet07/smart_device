@@ -2093,6 +2093,10 @@ button,
     padding: 0 30px;
   }
 
+  .page-nav__container {
+    padding: 22px 61px 34px 0;
+  }
+
   .page-footer__social {
     margin-right: 3.8vw;
   }
