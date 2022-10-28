@@ -906,8 +906,36 @@ button,
   fill: #f2f5f7;
 }
 
+.page-nav__link span {
+  position: relative;
+}
+
+.page-nav__link span::after {
+  content: "";
+  position: absolute;
+  height: 1px;
+  bottom: -5px;
+  left: 0;
+  right: 0;
+  background-color: #00b2ff;
+  visibility: hidden;
+  -webkit-transform: scaleX(0);
+  -ms-transform: scaleX(0);
+  transform: scaleX(0);
+  -webkit-transition: all 0.2s ease 0.2s;
+  -o-transition: all 0.2s ease 0.2s;
+  transition: all 0.2s ease 0.2s;
+}
+
 .page-nav__link:hover span {
   color: #00b2ff;
+}
+
+.page-nav__link:hover span::after {
+  visibility: visible;
+  -webkit-transform: scaleX(1);
+  -ms-transform: scaleX(1);
+  transform: scaleX(1);
 }
 
 .page-nav__link:focus span,

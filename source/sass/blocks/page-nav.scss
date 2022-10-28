@@ -29,7 +29,6 @@
 }
 
 .page-nav__link {
-
   padding: 5px;
   color: $color-page-white;
   line-height: 18px;
@@ -51,8 +50,30 @@
   fill: $color-page-white;
 }
 
+.page-nav__link span {
+  position: relative;
+
+  &::after {
+    content: "";
+    position: absolute;
+    height: 1px;
+    bottom: -5px;
+    left: 0;
+    right: 0;
+    background-color: $color-page-blue;
+    visibility: hidden;
+    transform: scaleX(0);
+    transition: all 0.2s ease 0.2s;
+  }
+}
+
 .page-nav__link:hover span {
   color: $color-page-blue;
+
+  &::after {
+    visibility: visible;
+    transform: scaleX(1);
+  }
 }
 
 .page-nav__link:focus span,
